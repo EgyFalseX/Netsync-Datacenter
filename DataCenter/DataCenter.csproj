@@ -53,43 +53,70 @@
     <ApplicationIcon>DataCenter.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.BonusSkins.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.BonusSkins.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Data.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Charts.v14.2.Core, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Office.v12.2.Core, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+    <Reference Include="DevExpress.Data.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.DataAccess.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.RichEdit.v12.2.Core, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+    <Reference Include="DevExpress.DataAccess.v14.2.UI, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Utils.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Office.v14.2.Core, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraBars.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Printing.v14.2.Core, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.RichEdit.v14.2.Core, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraGrid.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Spreadsheet.v14.2.Core, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraLayout.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Utils.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraRichEdit.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Utils.v14.2.UI, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraTreeList.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraBars.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraWizard.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraCharts.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpreadsheet.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraWizard.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
     <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
@@ -133,22 +160,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsDataCenter.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Forms\DeletedCategoryFrm.cs">
+    <Compile Include="Forms\Data\DeletedCategoryFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\DeletedCategoryFrm.Designer.cs">
+    <Compile Include="Forms\Data\DeletedCategoryFrm.Designer.cs">
       <DependentUpon>DeletedCategoryFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\DeletedItemFrm.cs">
+    <Compile Include="Forms\Data\DeletedItemFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\DeletedItemFrm.Designer.cs">
+    <Compile Include="Forms\Data\DeletedItemFrm.Designer.cs">
       <DependentUpon>DeletedItemFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AppRoleFrm.cs">
+    <Compile Include="Forms\ProgressFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AppRoleFrm.designer.cs">
+    <Compile Include="Forms\ProgressFrm.Designer.cs">
+      <DependentUpon>ProgressFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Roles\AppRoleFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Roles\AppRoleFrm.designer.cs">
       <DependentUpon>AppRoleFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Managers\DataManager.cs" />
@@ -162,168 +195,172 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsDataCenterLinq.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AboutUs.cs">
+    <Compile Include="Forms\Main\AboutUs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AboutUs.designer.cs">
+    <Compile Include="Forms\Main\AboutUs.designer.cs">
       <DependentUpon>AboutUs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CategoryEditorDLG.cs">
+    <Compile Include="Forms\Data\CategoryEditorDLG.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CategoryEditorDLG.Designer.cs">
+    <Compile Include="Forms\Data\CategoryEditorDLG.Designer.cs">
       <DependentUpon>CategoryEditorDLG.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CategoryPermissionEditorDLG.cs">
+    <Compile Include="Forms\Roles\CategoryPermissionEditorDLG.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CategoryPermissionEditorDLG.Designer.cs">
+    <Compile Include="Forms\Roles\CategoryPermissionEditorDLG.Designer.cs">
       <DependentUpon>CategoryPermissionEditorDLG.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\DebugLogsFrm.cs">
+    <Compile Include="Forms\Main\DebugLogsFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\DebugLogsFrm.Designer.cs">
+    <Compile Include="Forms\Main\DebugLogsFrm.Designer.cs">
       <DependentUpon>DebugLogsFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MSGDLG.cs">
+    <Compile Include="Forms\Main\MSGDLG.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MSGDLG.Designer.cs">
+    <Compile Include="Forms\Main\MSGDLG.Designer.cs">
       <DependentUpon>MSGDLG.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\UsersFrm.cs">
+    <Compile Include="Forms\Roles\UsersFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\UsersFrm.Designer.cs">
+    <Compile Include="Forms\Roles\UsersFrm.Designer.cs">
       <DependentUpon>UsersFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MSExcelViewerFrm.cs">
+    <Compile Include="Forms\FileViewer\MSExcelViewerFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MSExcelViewerFrm.Designer.cs">
+    <Compile Include="Forms\FileViewer\MSExcelViewerFrm.Designer.cs">
       <DependentUpon>MSExcelViewerFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\UserRoleFrm.cs">
+    <Compile Include="Forms\Roles\UserRoleFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\UserRoleFrm.Designer.cs">
+    <Compile Include="Forms\Roles\UserRoleFrm.Designer.cs">
       <DependentUpon>UserRoleFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\RoleFrm.cs">
+    <Compile Include="Forms\Roles\RoleFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\RoleFrm.Designer.cs">
+    <Compile Include="Forms\Roles\RoleFrm.Designer.cs">
       <DependentUpon>RoleFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\IconsFrm.cs">
+    <Compile Include="Forms\Data\IconsFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\IconsFrm.Designer.cs">
+    <Compile Include="Forms\Data\IconsFrm.Designer.cs">
       <DependentUpon>IconsFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ItemPermissionEditorDLG.cs">
+    <Compile Include="Forms\Roles\ItemPermissionEditorDLG.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ItemPermissionEditorDLG.Designer.cs">
+    <Compile Include="Forms\Roles\ItemPermissionEditorDLG.Designer.cs">
       <DependentUpon>ItemPermissionEditorDLG.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FileTypeFrm.cs">
+    <Compile Include="Forms\Data\FileTypeFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FileTypeFrm.Designer.cs">
+    <Compile Include="Forms\Data\FileTypeFrm.Designer.cs">
       <DependentUpon>FileTypeFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\HistoryViewerDLG.cs">
+    <Compile Include="Forms\Data\HistoryViewerDLG.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\HistoryViewerDLG.Designer.cs">
+    <Compile Include="Forms\Data\HistoryViewerDLG.Designer.cs">
       <DependentUpon>HistoryViewerDLG.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ImageViewerFrm.cs">
+    <Compile Include="Forms\FileViewer\ImageViewerFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ImageViewerFrm.Designer.cs">
+    <Compile Include="Forms\FileViewer\ImageViewerFrm.Designer.cs">
       <DependentUpon>ImageViewerFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ItemBrowserFrm.cs">
+    <Compile Include="Forms\Data\ItemBrowserFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ItemBrowserFrm.Designer.cs">
+    <Compile Include="Forms\Data\ItemBrowserFrm.Designer.cs">
       <DependentUpon>ItemBrowserFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ItemEditorDLG.cs">
+    <Compile Include="Forms\Data\ItemEditorDLG.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ItemEditorDLG.Designer.cs">
+    <Compile Include="Forms\Data\ItemEditorDLG.Designer.cs">
       <DependentUpon>ItemEditorDLG.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MainFrm.cs">
+    <Compile Include="Forms\Main\MainFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MainFrm.Designer.cs">
+    <Compile Include="Forms\Main\MainFrm.Designer.cs">
       <DependentUpon>MainFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MSWordViewerFrm.cs">
+    <Compile Include="Forms\FileViewer\MSWordViewerFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MSWordViewerFrm.Designer.cs">
+    <Compile Include="Forms\FileViewer\MSWordViewerFrm.Designer.cs">
       <DependentUpon>MSWordViewerFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SplashFrm.cs">
+    <Compile Include="Forms\Main\SplashFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SplashFrm.designer.cs">
+    <Compile Include="Forms\Main\SplashFrm.designer.cs">
       <DependentUpon>SplashFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SQLConnectionFrm.cs">
+    <Compile Include="Forms\Main\SQLConnectionFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SQLConnectionFrm.designer.cs">
+    <Compile Include="Forms\Main\SQLConnectionFrm.designer.cs">
       <DependentUpon>SQLConnectionFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\WaitWindowFrm.cs">
+    <Compile Include="Forms\Main\WaitWindowFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\WaitWindowFrm.designer.cs">
+    <Compile Include="Forms\Main\WaitWindowFrm.designer.cs">
       <DependentUpon>WaitWindowFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\LoginFrm.cs">
+    <Compile Include="Forms\Main\LoginFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\LoginFrm.Designer.cs">
+    <Compile Include="Forms\Main\LoginFrm.Designer.cs">
       <DependentUpon>LoginFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Uti\Types.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Managers\AppManager.cs" />
-    <Compile Include="Forms\ServerOptionWizardFrm.cs">
+    <Compile Include="Forms\Main\ServerOptionWizardFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ServerOptionWizardFrm.Designer.cs">
+    <Compile Include="Forms\Main\ServerOptionWizardFrm.Designer.cs">
       <DependentUpon>ServerOptionWizardFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
     <Compile Include="Managers\UserManager.cs" />
-    <EmbeddedResource Include="Forms\DeletedCategoryFrm.resx">
+    <EmbeddedResource Include="Forms\Data\DeletedCategoryFrm.resx">
       <DependentUpon>DeletedCategoryFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DeletedItemFrm.resx">
+    <EmbeddedResource Include="Forms\Data\DeletedItemFrm.resx">
       <DependentUpon>DeletedItemFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DebugLogsFrm.resx">
+    <EmbeddedResource Include="Forms\Main\DebugLogsFrm.resx">
       <DependentUpon>DebugLogsFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MSGDLG.resx">
+    <EmbeddedResource Include="Forms\Main\MSGDLG.resx">
       <DependentUpon>MSGDLG.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AppRoleFrm.resx">
+    <EmbeddedResource Include="Forms\ProgressFrm.resx">
+      <DependentUpon>ProgressFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Roles\AppRoleFrm.resx">
       <DependentUpon>AppRoleFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UsersFrm.resx">
+    <EmbeddedResource Include="Forms\Roles\UsersFrm.resx">
       <DependentUpon>UsersFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ServerOptionWizardFrm.resx">
+    <EmbeddedResource Include="Forms\Main\ServerOptionWizardFrm.resx">
       <DependentUpon>ServerOptionWizardFrm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DataSources\dsQueries.xsc">
@@ -340,61 +377,61 @@
     <None Include="DataSources\Linq\dsDataCenterLinq.dbml.layout">
       <DependentUpon>dsDataCenterLinq.dbml</DependentUpon>
     </None>
-    <EmbeddedResource Include="Forms\AboutUs.resx">
+    <EmbeddedResource Include="Forms\Main\AboutUs.resx">
       <DependentUpon>AboutUs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CategoryEditorDLG.resx">
+    <EmbeddedResource Include="Forms\Data\CategoryEditorDLG.resx">
       <DependentUpon>CategoryEditorDLG.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CategoryPermissionEditorDLG.resx">
+    <EmbeddedResource Include="Forms\Roles\CategoryPermissionEditorDLG.resx">
       <DependentUpon>CategoryPermissionEditorDLG.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MSExcelViewerFrm.resx">
+    <EmbeddedResource Include="Forms\FileViewer\MSExcelViewerFrm.resx">
       <DependentUpon>MSExcelViewerFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UserRoleFrm.resx">
+    <EmbeddedResource Include="Forms\Roles\UserRoleFrm.resx">
       <DependentUpon>UserRoleFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\RoleFrm.resx">
+    <EmbeddedResource Include="Forms\Roles\RoleFrm.resx">
       <DependentUpon>RoleFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\IconsFrm.resx">
+    <EmbeddedResource Include="Forms\Data\IconsFrm.resx">
       <DependentUpon>IconsFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ItemPermissionEditorDLG.resx">
+    <EmbeddedResource Include="Forms\Roles\ItemPermissionEditorDLG.resx">
       <DependentUpon>ItemPermissionEditorDLG.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FileTypeFrm.resx">
+    <EmbeddedResource Include="Forms\Data\FileTypeFrm.resx">
       <DependentUpon>FileTypeFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\HistoryViewerDLG.resx">
+    <EmbeddedResource Include="Forms\Data\HistoryViewerDLG.resx">
       <DependentUpon>HistoryViewerDLG.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ImageViewerFrm.resx">
+    <EmbeddedResource Include="Forms\FileViewer\ImageViewerFrm.resx">
       <DependentUpon>ImageViewerFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ItemBrowserFrm.resx">
+    <EmbeddedResource Include="Forms\Data\ItemBrowserFrm.resx">
       <DependentUpon>ItemBrowserFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ItemEditorDLG.resx">
+    <EmbeddedResource Include="Forms\Data\ItemEditorDLG.resx">
       <DependentUpon>ItemEditorDLG.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MainFrm.resx">
+    <EmbeddedResource Include="Forms\Main\MainFrm.resx">
       <DependentUpon>MainFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MSWordViewerFrm.resx">
+    <EmbeddedResource Include="Forms\FileViewer\MSWordViewerFrm.resx">
       <DependentUpon>MSWordViewerFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SplashFrm.resx">
+    <EmbeddedResource Include="Forms\Main\SplashFrm.resx">
       <DependentUpon>SplashFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SQLConnectionFrm.resx">
+    <EmbeddedResource Include="Forms\Main\SQLConnectionFrm.resx">
       <DependentUpon>SQLConnectionFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\WaitWindowFrm.resx">
+    <EmbeddedResource Include="Forms\Main\WaitWindowFrm.resx">
       <DependentUpon>WaitWindowFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LoginFrm.resx">
+    <EmbeddedResource Include="Forms\Main\LoginFrm.resx">
       <DependentUpon>LoginFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -461,9 +498,7 @@
       <Name>nsLib</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="misc\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Close.png" />
   </ItemGroup>
@@ -548,6 +583,7 @@
   <ItemGroup>
     <Content Include="DataCenter.ico" />
     <Content Include="Log4Net\DataCenterLog4Net.txt" />
+    <None Include="Resources\cancel_16x16.png" />
     <Content Include="TextFile1.txt" />
     <None Include="Resources\MSG_Warnning.png" />
     <None Include="Resources\MSG_Success.png" />

@@ -14,6 +14,16 @@ namespace DataCenter
         private static readonly log4net.ILog Logger = log4net.LogManager.GetLogger(typeof(DataCenterX));
         public static nsLib.nsLib NSManager { get; set; }
         public static DataCenter.Forms.DebugLogsFrm DebugLog { get; set; }
+        public static string updaterPath = Application.StartupPath + @"\Updater.exe";
+
+        public enum AssociationType
+        {
+            Unknown = 0
+            ,Image
+            ,Word
+            ,Excel
+        
+        }
 
         public DataCenterX()
         {

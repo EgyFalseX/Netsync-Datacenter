@@ -15,7 +15,7 @@ namespace DataCenter.Managers
     {
         
         #region -   Variables   -
-        private static readonly ILog Logger = log4net.LogManager.GetLogger(typeof(Program));
+        private static readonly ILog Logger = log4net.LogManager.GetLogger(typeof(DataManager));
         public static DataManager defaultInstance;
         DataSources.dsDataCenter dsData;
         public DataSources.dsQueries dsQry;
@@ -385,6 +385,103 @@ namespace DataCenter.Managers
                 if (row.Deleting)
                     Deleting = row.Deleting;
             }
+        }
+
+
+        public static Dictionary<string, int> GetCurrentAssemblyFiles()
+        {
+            Dictionary<string, int> Asm = new Dictionary<string, int>();
+            Asm.Add("DevExpress.BonusSkins.v14.2.dll", 142415030);
+            Asm.Add("DevExpress.Charts.v14.2.Core.dll", 142415030);
+            Asm.Add("DevExpress.Data.v14.2.dll", 142415030);
+            Asm.Add("DevExpress.DataAccess.v14.2.dll", 142415030);
+            Asm.Add("DevExpress.DataAccess.v14.2.UI.dll", 142415030);
+            Asm.Add("DevExpress.Office.v14.2.Core.dll", 142415030);
+            Asm.Add("DevExpress.Printing.v14.2.Core.dll", 142415030);
+            Asm.Add("DevExpress.RichEdit.v14.2.Core.dll", 142415030);
+            Asm.Add("DevExpress.Spreadsheet.v14.2.Core.dll", 142415030);
+            Asm.Add("DevExpress.Utils.v14.2.dll", 142415030);
+            Asm.Add("DevExpress.Utils.v14.2.UI.dll", 142415030);
+            Asm.Add("DevExpress.XtraBars.v14.2.dll", 142415030);
+            Asm.Add("DevExpress.XtraCharts.v14.2.dll", 142415030);
+            Asm.Add("DevExpress.XtraEditors.v14.2.dll", 142415030);
+            Asm.Add("DevExpress.XtraGrid.v14.2.dll", 142415030);
+            Asm.Add("DevExpress.XtraLayout.v14.2.dll", 142415030);
+            Asm.Add("DevExpress.XtraNavBar.v14.2.dll", 142415030);
+            Asm.Add("DevExpress.XtraPrinting.v14.2.dll", 142415030);
+            Asm.Add("DevExpress.XtraRichEdit.v14.2.dll", 142415030);
+            Asm.Add("DevExpress.XtraSpreadsheet.v14.2.dll", 142415030);
+            Asm.Add("DevExpress.XtraTreeList.v14.2.dll", 142415030);
+            Asm.Add("DevExpress.XtraWizard.v14.2.dll", 142415030);
+            Asm.Add("FXFW.dll", 1002);
+            Asm.Add("Ionic.Zip.dll", 1918);
+            Asm.Add("log4net.dll", 12110);
+            Asm.Add(Application.ProductName + ".exe", Convert.ToInt32(System.Windows.Forms.Application.ProductVersion.Replace(".", "")));
+
+            return Asm;
+        }
+        public static DataCenter.DataSources.dsDataCenter.AppDependenceFileDataTable GetDownloadDependanceies()
+        {
+            using (DataCenter.DataSources.dsDataCenterTableAdapters.AppDependenceFileTableAdapter adpQry = new DataSources.dsDataCenterTableAdapters.AppDependenceFileTableAdapter())
+            {
+                DataCenter.DataSources.dsDataCenter.AppDependenceFileDataTable RequiredFilesTbl = new DataCenter.DataSources.dsDataCenter.AppDependenceFileDataTable();
+                adpQry.FillByLiteData(RequiredFilesTbl);
+                Dictionary<string, int> ExistsFiles = GetCurrentAssemblyFiles();
+                for (int i = (RequiredFilesTbl.Count - 1); i >= 0; i--)
+                {
+                    DataCenter.DataSources.dsDataCenter.AppDependenceFileRow row = (DataCenter.DataSources.dsDataCenter.AppDependenceFileRow)RequiredFilesTbl.Rows[i];
+                    int Version = 0;
+                    if (ExistsFiles.TryGetValue(row.FileName, out Version))
+                    {
+                        if (row.FileVersion <= Version)
+                            RequiredFilesTbl.Rows.RemoveAt(i);
+                    }
+                }
+                return RequiredFilesTbl;
+            }
+        }
+        public static void PerformUpdaterDownload(DataCenter.DataSources.dsDataCenter.AppDependenceFileDataTable tbl)
+        {
+            if (tbl.Count == 0)// No Update Found
+                return;
+            string Data = String.Format("{0}|{1}|", (int)Uti.Types.UpdaterArgsEnum.Download, Properties.Settings.Default.DataCenterConnectionString);
+            for (int i = 0; i < tbl.Rows.Count; i++)
+            {
+                Data += ((DataCenter.DataSources.dsDataCenter.AppDependenceFileRow)tbl.Rows[i]).FileName;
+                if (i + 1 < tbl.Rows.Count)
+                    Data += "|";
+            }
+        
+            Data = String.Format("\"{0}\"", Data);
+            using (System.Diagnostics.Process process = new System.Diagnostics.Process() { StartInfo = new System.Diagnostics.ProcessStartInfo(DataCenterX.updaterPath, Data) })
+            {
+                process.Start();
+            }
+
+            System.Diagnostics.Process.GetCurrentProcess().Kill();
+
+        }
+        public static Dictionary<string, int> GetUploadDependanceies()
+        {
+            Dictionary<string, int> NeededFiles = new Dictionary<string, int>();
+            using (NICSQLTools.Data.dsDataTableAdapters.AppDependenceFileTableAdapter adpQry = new Data.dsDataTableAdapters.AppDependenceFileTableAdapter())
+            {
+                NICSQLTools.Data.dsData.AppDependenceFileDataTable RequiredFilesTbl = new Data.dsData.AppDependenceFileDataTable();
+                adpQry.FillByLiteData(RequiredFilesTbl);
+                Dictionary<string, int> AppFiles = GetCurrentAssemblyFiles();
+                foreach (KeyValuePair<string, int> item in AppFiles)
+                {
+                    Data.dsData.AppDependenceFileRow row = RequiredFilesTbl.FindByFileName(item.Key);
+                    if (row == null)
+                        NeededFiles.Add(item.Key, item.Value);
+                    else
+                    {
+                        if (row.FileVersion < item.Value)
+                            NeededFiles.Add(item.Key, item.Value);
+                    }
+                }
+            }
+            return NeededFiles;
         }
 
         #endregion

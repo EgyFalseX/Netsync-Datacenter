@@ -34,6 +34,7 @@ namespace DataCenter
             {
                 DatabaseScripts.FireScript();
                 Application.Run(new Forms.MainFrm());
+                Application.Exit();
             }
         }
 

@@ -62,7 +62,7 @@ namespace DataCenter.Managers
             }
             else
             {
-                DataCenterX.LogMessage(string.Format("User: {0} Error SignIn", UserInfo.UserName), typeof(UserManager), nsLib.Utilities.Types.MessageType.Warn, null, true);
+                DataCenterX.LogMessage(string.Format("User: {0} Error SignIn", username), typeof(UserManager), nsLib.Utilities.Types.MessageType.Warn, null, true);
                 return false;
             }
         }

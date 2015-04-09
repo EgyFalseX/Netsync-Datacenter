@@ -1,0 +1,10 @@
+Change Folder Icon -> X Sign
+_______________________________________________________________________
+XXXXXXXXXXX Enter Empty Password Give An Error While Login
+_______________________________________________________________________
+XXXXXXXXXXX File Type: Can't Add File With Icon
+_______________________________________________________________________
+XXXXXXXXXXX Application Still Running After Close Main Window
+_______________________________________________________________________
+
+
