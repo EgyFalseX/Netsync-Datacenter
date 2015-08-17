@@ -48,26 +48,7 @@
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabControlMain = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPageEdit = new DevExpress.XtraTab.XtraTabPage();
-            this.ceStu = new DevExpress.XtraEditors.CheckEdit();
-            this.ceEmp = new DevExpress.XtraEditors.CheckEdit();
-            this.gcStu = new DevExpress.XtraEditors.GroupControl();
-            this.luestu_code = new DevExpress.XtraEditors.LookUpEdit();
-            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsQueries = new DataCenter.DataSources.dsQueries();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.luealsofof_code = new DevExpress.XtraEditors.LookUpEdit();
-            this.faslBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.luefasl_code = new DevExpress.XtraEditors.LookUpEdit();
-            this.alsofofBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.lueasase_code = new DevExpress.XtraEditors.LookUpEdit();
-            this.asaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.gcEmp = new DevExpress.XtraEditors.GroupControl();
-            this.lueEmpCode = new DevExpress.XtraEditors.LookUpEdit();
-            this.empBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.btnDownload = new DevExpress.XtraEditors.SimpleButton();
             this.btnUpload = new DevExpress.XtraEditors.SimpleButton();
             this.lueTypeId = new DevExpress.XtraEditors.GridLookUpEdit();
@@ -90,11 +71,6 @@
             this.pnlProgress = new DevExpress.XtraEditors.PanelControl();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.asaseTableAdapter = new DataCenter.DataSources.dsQueriesTableAdapters.asaseTableAdapter();
-            this.alsofofTableAdapter = new DataCenter.DataSources.dsQueriesTableAdapters.alsofofTableAdapter();
-            this.faslTableAdapter = new DataCenter.DataSources.dsQueriesTableAdapters.faslTableAdapter();
-            this.studentTableAdapter = new DataCenter.DataSources.dsQueriesTableAdapters.StudentTableAdapter();
-            this.empTableAdapter = new DataCenter.DataSources.dsQueriesTableAdapters.EmpTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.ceLocker.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbInfo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbItemName.Properties)).BeginInit();
@@ -103,23 +79,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControlMain)).BeginInit();
             this.xtraTabControlMain.SuspendLayout();
             this.xtraTabPageEdit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ceStu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ceEmp.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcStu)).BeginInit();
-            this.gcStu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.luestu_code.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsQueries)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.luealsofof_code.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.faslBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.luefasl_code.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alsofofBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueasase_code.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.asaseBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcEmp)).BeginInit();
-            this.gcEmp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lueEmpCode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.empBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueTypeId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDataCenter)).BeginInit();
@@ -277,7 +237,7 @@
             this.gcCommands.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.gcCommands.Controls.Add(this.btnClose);
             this.gcCommands.Controls.Add(this.btnSave);
-            this.gcCommands.Location = new System.Drawing.Point(12, 510);
+            this.gcCommands.Location = new System.Drawing.Point(12, 364);
             this.gcCommands.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gcCommands.Name = "gcCommands";
             this.gcCommands.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -319,7 +279,7 @@
             this.xtraTabControlMain.PageImagePosition = DevExpress.XtraTab.TabPageImagePosition.Far;
             this.xtraTabControlMain.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.xtraTabControlMain.SelectedTabPage = this.xtraTabPageEdit;
-            this.xtraTabControlMain.Size = new System.Drawing.Size(334, 472);
+            this.xtraTabControlMain.Size = new System.Drawing.Size(334, 326);
             this.xtraTabControlMain.TabIndex = 0;
             this.xtraTabControlMain.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPageEdit,
@@ -327,10 +287,6 @@
             // 
             // xtraTabPageEdit
             // 
-            this.xtraTabPageEdit.Controls.Add(this.ceStu);
-            this.xtraTabPageEdit.Controls.Add(this.ceEmp);
-            this.xtraTabPageEdit.Controls.Add(this.gcStu);
-            this.xtraTabPageEdit.Controls.Add(this.gcEmp);
             this.xtraTabPageEdit.Controls.Add(this.btnDownload);
             this.xtraTabPageEdit.Controls.Add(this.btnUpload);
             this.xtraTabPageEdit.Controls.Add(this.lueTypeId);
@@ -342,231 +298,13 @@
             this.xtraTabPageEdit.Controls.Add(this.labelControl3);
             this.xtraTabPageEdit.Image = global::DataCenter.Properties.Resources.Edit;
             this.xtraTabPageEdit.Name = "xtraTabPageEdit";
-            this.xtraTabPageEdit.Size = new System.Drawing.Size(328, 425);
+            this.xtraTabPageEdit.Size = new System.Drawing.Size(328, 279);
             this.xtraTabPageEdit.Text = "تفاصيل  ";
-            // 
-            // ceStu
-            // 
-            this.ceStu.Location = new System.Drawing.Point(20, 304);
-            this.ceStu.Name = "ceStu";
-            this.ceStu.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
-            this.ceStu.Properties.Appearance.Options.UseBackColor = true;
-            this.ceStu.Properties.Caption = "";
-            this.ceStu.Size = new System.Drawing.Size(21, 19);
-            this.ceStu.TabIndex = 2;
-            this.ceStu.CheckedChanged += new System.EventHandler(this.ceStu_CheckedChanged);
-            // 
-            // ceEmp
-            // 
-            this.ceEmp.Location = new System.Drawing.Point(20, 237);
-            this.ceEmp.Name = "ceEmp";
-            this.ceEmp.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
-            this.ceEmp.Properties.Appearance.Options.UseBackColor = true;
-            this.ceEmp.Properties.Caption = "";
-            this.ceEmp.Size = new System.Drawing.Size(21, 19);
-            this.ceEmp.TabIndex = 2;
-            this.ceEmp.CheckedChanged += new System.EventHandler(this.ceEmp_CheckedChanged);
-            // 
-            // gcStu
-            // 
-            this.gcStu.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.gcStu.AppearanceCaption.Options.UseFont = true;
-            this.gcStu.AppearanceCaption.Options.UseTextOptions = true;
-            this.gcStu.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.gcStu.Controls.Add(this.luestu_code);
-            this.gcStu.Controls.Add(this.labelControl10);
-            this.gcStu.Controls.Add(this.luealsofof_code);
-            this.gcStu.Controls.Add(this.luefasl_code);
-            this.gcStu.Controls.Add(this.labelControl12);
-            this.gcStu.Controls.Add(this.labelControl11);
-            this.gcStu.Controls.Add(this.lueasase_code);
-            this.gcStu.Controls.Add(this.labelControl9);
-            this.gcStu.Enabled = false;
-            this.gcStu.Location = new System.Drawing.Point(15, 302);
-            this.gcStu.Name = "gcStu";
-            this.gcStu.Size = new System.Drawing.Size(298, 119);
-            this.gcStu.TabIndex = 5;
-            this.gcStu.Text = "بيانات الطلاب";
-            // 
-            // luestu_code
-            // 
-            this.luestu_code.Location = new System.Drawing.Point(5, 88);
-            this.luestu_code.Name = "luestu_code";
-            this.luestu_code.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.luestu_code.Properties.Appearance.Options.UseFont = true;
-            this.luestu_code.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.luestu_code.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("stu_name", "اسم", 66, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
-            this.luestu_code.Properties.DataSource = this.studentBindingSource;
-            this.luestu_code.Properties.DisplayMember = "stu_name";
-            this.luestu_code.Properties.NullText = "";
-            this.luestu_code.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.luestu_code.Properties.ValueMember = "stu_code";
-            this.luestu_code.Size = new System.Drawing.Size(207, 22);
-            this.luestu_code.TabIndex = 3;
-            // 
-            // studentBindingSource
-            // 
-            this.studentBindingSource.DataMember = "Student";
-            this.studentBindingSource.DataSource = this.dsQueries;
             // 
             // dsQueries
             // 
             this.dsQueries.DataSetName = "dsQueries";
             this.dsQueries.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // labelControl10
-            // 
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl10.Location = new System.Drawing.Point(218, 91);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(69, 17);
-            this.labelControl10.TabIndex = 0;
-            this.labelControl10.Text = "اسم الطالب";
-            // 
-            // luealsofof_code
-            // 
-            this.luealsofof_code.Location = new System.Drawing.Point(5, 62);
-            this.luealsofof_code.Name = "luealsofof_code";
-            this.luealsofof_code.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.luealsofof_code.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("fasl_name", "الفصل", 69, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
-            this.luealsofof_code.Properties.DataSource = this.faslBindingSource;
-            this.luealsofof_code.Properties.DisplayMember = "fasl_name";
-            this.luealsofof_code.Properties.NullText = "";
-            this.luealsofof_code.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.luealsofof_code.Properties.ValueMember = "fasl_code";
-            this.luealsofof_code.Size = new System.Drawing.Size(95, 20);
-            this.luealsofof_code.TabIndex = 2;
-            this.luealsofof_code.EditValueChanged += new System.EventHandler(this.lueStu_EditValueChanged);
-            // 
-            // faslBindingSource
-            // 
-            this.faslBindingSource.DataMember = "fasl";
-            this.faslBindingSource.DataSource = this.dsQueries;
-            // 
-            // luefasl_code
-            // 
-            this.luefasl_code.Location = new System.Drawing.Point(147, 62);
-            this.luefasl_code.Name = "luefasl_code";
-            this.luefasl_code.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.luefasl_code.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("alsofof_name", "الصف", 87, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
-            this.luefasl_code.Properties.DataSource = this.alsofofBindingSource;
-            this.luefasl_code.Properties.DisplayMember = "alsofof_name";
-            this.luefasl_code.Properties.NullText = "";
-            this.luefasl_code.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.luefasl_code.Properties.ValueMember = "alsofof_code";
-            this.luefasl_code.Size = new System.Drawing.Size(101, 20);
-            this.luefasl_code.TabIndex = 1;
-            this.luefasl_code.EditValueChanged += new System.EventHandler(this.lueStu_EditValueChanged);
-            // 
-            // alsofofBindingSource
-            // 
-            this.alsofofBindingSource.DataMember = "alsofof";
-            this.alsofofBindingSource.DataSource = this.dsQueries;
-            // 
-            // labelControl12
-            // 
-            this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl12.Location = new System.Drawing.Point(106, 63);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(35, 17);
-            this.labelControl12.TabIndex = 0;
-            this.labelControl12.Text = "الفصل";
-            // 
-            // labelControl11
-            // 
-            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl11.Location = new System.Drawing.Point(256, 63);
-            this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(31, 17);
-            this.labelControl11.TabIndex = 0;
-            this.labelControl11.Text = "الصف";
-            // 
-            // lueasase_code
-            // 
-            this.lueasase_code.Location = new System.Drawing.Point(5, 32);
-            this.lueasase_code.Name = "lueasase_code";
-            this.lueasase_code.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.lueasase_code.Properties.Appearance.Options.UseFont = true;
-            this.lueasase_code.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueasase_code.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("asase_code", "كود", 90, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("asase_year", "اسم السنة", 75, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
-            this.lueasase_code.Properties.DataSource = this.asaseBindingSource;
-            this.lueasase_code.Properties.DisplayMember = "asase_year";
-            this.lueasase_code.Properties.NullText = "";
-            this.lueasase_code.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.lueasase_code.Properties.ValueMember = "asase_code";
-            this.lueasase_code.Size = new System.Drawing.Size(241, 22);
-            this.lueasase_code.TabIndex = 0;
-            this.lueasase_code.EditValueChanged += new System.EventHandler(this.lueStu_EditValueChanged);
-            // 
-            // asaseBindingSource
-            // 
-            this.asaseBindingSource.DataMember = "asase";
-            this.asaseBindingSource.DataSource = this.dsQueries;
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl9.Location = new System.Drawing.Point(252, 35);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(35, 17);
-            this.labelControl9.TabIndex = 0;
-            this.labelControl9.Text = "السنة";
-            // 
-            // gcEmp
-            // 
-            this.gcEmp.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.gcEmp.AppearanceCaption.Options.UseFont = true;
-            this.gcEmp.AppearanceCaption.Options.UseTextOptions = true;
-            this.gcEmp.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.gcEmp.Controls.Add(this.lueEmpCode);
-            this.gcEmp.Controls.Add(this.labelControl7);
-            this.gcEmp.Enabled = false;
-            this.gcEmp.Location = new System.Drawing.Point(15, 235);
-            this.gcEmp.Name = "gcEmp";
-            this.gcEmp.Size = new System.Drawing.Size(298, 61);
-            this.gcEmp.TabIndex = 4;
-            this.gcEmp.Text = "بيانات العاملين";
-            // 
-            // lueEmpCode
-            // 
-            this.lueEmpCode.Location = new System.Drawing.Point(5, 29);
-            this.lueEmpCode.Name = "lueEmpCode";
-            this.lueEmpCode.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.lueEmpCode.Properties.Appearance.Options.UseFont = true;
-            this.lueEmpCode.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueEmpCode.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "الاسم", 43, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
-            this.lueEmpCode.Properties.DataSource = this.empBindingSource;
-            this.lueEmpCode.Properties.DisplayMember = "Name";
-            this.lueEmpCode.Properties.NullText = "";
-            this.lueEmpCode.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.lueEmpCode.Properties.ValueMember = "Code";
-            this.lueEmpCode.Size = new System.Drawing.Size(195, 22);
-            this.lueEmpCode.TabIndex = 0;
-            // 
-            // empBindingSource
-            // 
-            this.empBindingSource.DataMember = "Emp";
-            this.empBindingSource.DataSource = this.dsQueries;
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl7.Location = new System.Drawing.Point(221, 35);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(66, 17);
-            this.labelControl7.TabIndex = 0;
-            this.labelControl7.Text = "اسم العامل";
             // 
             // btnDownload
             // 
@@ -679,7 +417,7 @@
             this.xtraTabPageInfo.Controls.Add(this.tableLayoutPanel1);
             this.xtraTabPageInfo.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPageInfo.Image")));
             this.xtraTabPageInfo.Name = "xtraTabPageInfo";
-            this.xtraTabPageInfo.Size = new System.Drawing.Size(328, 425);
+            this.xtraTabPageInfo.Size = new System.Drawing.Size(328, 279);
             this.xtraTabPageInfo.Text = "معلومات  ";
             // 
             // tableLayoutPanel1
@@ -757,7 +495,7 @@
             this.pnlProgress.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pnlProgress.Controls.Add(this.btnCancel);
             this.pnlProgress.Controls.Add(this.pbc);
-            this.pnlProgress.Location = new System.Drawing.Point(12, 485);
+            this.pnlProgress.Location = new System.Drawing.Point(12, 339);
             this.pnlProgress.Name = "pnlProgress";
             this.pnlProgress.Size = new System.Drawing.Size(329, 22);
             this.pnlProgress.TabIndex = 6;
@@ -779,33 +517,13 @@
             this.xtraTabPage2.Size = new System.Drawing.Size(0, 0);
             this.xtraTabPage2.Text = "xtraTabPage2";
             // 
-            // asaseTableAdapter
-            // 
-            this.asaseTableAdapter.ClearBeforeFill = true;
-            // 
-            // alsofofTableAdapter
-            // 
-            this.alsofofTableAdapter.ClearBeforeFill = true;
-            // 
-            // faslTableAdapter
-            // 
-            this.faslTableAdapter.ClearBeforeFill = true;
-            // 
-            // studentTableAdapter
-            // 
-            this.studentTableAdapter.ClearBeforeFill = true;
-            // 
-            // empTableAdapter
-            // 
-            this.empTableAdapter.ClearBeforeFill = true;
-            // 
             // ItemEditorDLG
             // 
             this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(350, 573);
+            this.ClientSize = new System.Drawing.Size(350, 427);
             this.Controls.Add(this.pnlProgress);
             this.Controls.Add(this.xtraTabControlMain);
             this.Controls.Add(this.gcCommands);
@@ -826,25 +544,7 @@
             this.xtraTabControlMain.ResumeLayout(false);
             this.xtraTabPageEdit.ResumeLayout(false);
             this.xtraTabPageEdit.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ceStu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ceEmp.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcStu)).EndInit();
-            this.gcStu.ResumeLayout(false);
-            this.gcStu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.luestu_code.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsQueries)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.luealsofof_code.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.faslBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.luefasl_code.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alsofofBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueasase_code.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.asaseBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcEmp)).EndInit();
-            this.gcEmp.ResumeLayout(false);
-            this.gcEmp.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lueEmpCode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.empBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueTypeId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDataCenter)).EndInit();
@@ -902,30 +602,6 @@
         private DevExpress.XtraEditors.LabelControl lblLockByLable;
         private DevExpress.XtraEditors.LabelControl lblLockBy;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
-        private DevExpress.XtraEditors.GroupControl gcEmp;
-        private DevExpress.XtraEditors.LookUpEdit lueEmpCode;
-        private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.GroupControl gcStu;
-        private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.XtraEditors.CheckEdit ceStu;
-        private DevExpress.XtraEditors.CheckEdit ceEmp;
-        private DevExpress.XtraEditors.LookUpEdit luestu_code;
-        private DevExpress.XtraEditors.LabelControl labelControl10;
-        private DevExpress.XtraEditors.LookUpEdit luealsofof_code;
-        private DevExpress.XtraEditors.LookUpEdit luefasl_code;
-        private DevExpress.XtraEditors.LabelControl labelControl12;
-        private DevExpress.XtraEditors.LabelControl labelControl11;
-        private DevExpress.XtraEditors.LookUpEdit lueasase_code;
         private DataSources.dsQueries dsQueries;
-        private System.Windows.Forms.BindingSource asaseBindingSource;
-        private DataSources.dsQueriesTableAdapters.asaseTableAdapter asaseTableAdapter;
-        private System.Windows.Forms.BindingSource alsofofBindingSource;
-        private DataSources.dsQueriesTableAdapters.alsofofTableAdapter alsofofTableAdapter;
-        private System.Windows.Forms.BindingSource faslBindingSource;
-        private DataSources.dsQueriesTableAdapters.faslTableAdapter faslTableAdapter;
-        private System.Windows.Forms.BindingSource studentBindingSource;
-        private DataSources.dsQueriesTableAdapters.StudentTableAdapter studentTableAdapter;
-        private System.Windows.Forms.BindingSource empBindingSource;
-        private DataSources.dsQueriesTableAdapters.EmpTableAdapter empTableAdapter;
     }
 }

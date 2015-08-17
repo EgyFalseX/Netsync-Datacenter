@@ -32,12 +32,6 @@ namespace DataCenter.Forms
         }
         private void BindingsCollection()
         {
-            empBindingSource.DataSource = DataManager.defaultInstance.dsQry; empBindingSource.DataMember = "Emp";
-            asaseBindingSource.DataSource = DataManager.defaultInstance.dsQry; asaseBindingSource.DataMember = "asase";
-            alsofofBindingSource.DataSource = DataManager.defaultInstance.dsQry; alsofofBindingSource.DataMember = "alsofof";
-            faslBindingSource.DataSource = DataManager.defaultInstance.dsQry; faslBindingSource.DataMember = "fasl";
-            //studentBindingSource.DataSource = DataManager.defaultInstance.dsQry; studentBindingSource.DataMember = "Student";
-                
             DataSources.dsDataCenterTableAdapters.CategoryTableAdapter adpCat = new DataSources.dsDataCenterTableAdapters.CategoryTableAdapter();
             DataSources.dsDataCenterTableAdapters.ItemTableAdapter adpItem = new DataSources.dsDataCenterTableAdapters.ItemTableAdapter();
 
@@ -74,33 +68,6 @@ namespace DataCenter.Forms
                     lblLockBy.Text = DataManager.defaultInstance.GetItemLockuser(_row.ItemId);
                 }
             }
-
-            if (!_row.IsNull("EmpCode"))
-            {
-                lueEmpCode.EditValue = _row.EmpCode;
-                ceEmp.Checked = true;
-            }
-            if (!_row.IsNull("asase_code"))
-            {
-                lueasase_code.EditValue = _row.asase_code;
-                ceStu.Checked = true;
-            }
-            if (!_row.IsNull("alsofof_code"))
-            {
-                luealsofof_code.EditValue = _row.alsofof_code;
-                ceStu.Checked = true;
-            }
-            if (!_row.IsNull("fasl_code"))
-            {
-                luefasl_code.EditValue = _row.fasl_code;
-                ceStu.Checked = true;
-            }
-            if (!_row.IsNull("stu_code"))
-            {
-                luestu_code.EditValue = _row.stu_code;
-                ceStu.Checked = true;
-            }
-
         }
       
         #endregion
@@ -122,28 +89,6 @@ namespace DataCenter.Forms
             this.typesTableAdapter.Fill(this.dsDataCenter.Types);
 
             BindingsCollection();
-        }
-        private void ceEmp_CheckedChanged(object sender, EventArgs e)
-        {
-            gcEmp.Enabled = !gcEmp.Enabled;
-        }
-        private void ceStu_CheckedChanged(object sender, EventArgs e)
-        {
-            gcStu.Enabled = !gcStu.Enabled;
-        }
-        private void lueStu_EditValueChanged(object sender, EventArgs e)
-        {
-            int asase_code = -1, alsofof_code = -1, fasl_code = -1;
-            if (!DataManager.IsNullOrEmpty(lueasase_code.EditValue))
-                asase_code = Convert.ToInt32(lueasase_code.EditValue);
-            if (!DataManager.IsNullOrEmpty(luealsofof_code.EditValue))
-                alsofof_code = Convert.ToInt32(luealsofof_code.EditValue);
-            if (!DataManager.IsNullOrEmpty(luefasl_code.EditValue))
-                fasl_code = Convert.ToInt32(luefasl_code.EditValue);
-
-            studentTableAdapter.FillByPram(dsQueries.Student, asase_code, alsofof_code, fasl_code);
-
-
         }
         private void ceLocker_CheckedChanged(object sender, EventArgs e)
         {
@@ -242,37 +187,6 @@ namespace DataCenter.Forms
 
             if (ceLocker.EditValue != null)
                 _row.Locker = ceLocker.Checked;
-
-            if (ceEmp.Checked)
-            {
-                if (!DataManager.IsNullOrEmpty(lueEmpCode.EditValue))
-                    _row.EmpCode = Convert.ToInt32(lueEmpCode.EditValue);
-            }
-            else
-                _row.SetEmpCodeNull();
-
-
-            if (ceStu.Checked)
-            {
-                if (!DataManager.IsNullOrEmpty(lueasase_code.EditValue))
-                    _row.asase_code = Convert.ToInt32(lueasase_code.EditValue);
-
-                if (!DataManager.IsNullOrEmpty(luealsofof_code.EditValue))
-                    _row.alsofof_code = Convert.ToInt32(luealsofof_code.EditValue);
-
-                if (!DataManager.IsNullOrEmpty(luefasl_code.EditValue))
-                    _row.fasl_code = Convert.ToInt32(luefasl_code.EditValue);
-
-                if (!DataManager.IsNullOrEmpty(luestu_code.EditValue))
-                    _row.stu_code = Convert.ToInt32(luestu_code.EditValue);
-            }
-            else
-            {
-                _row.Setasase_codeNull();
-                _row.Setalsofof_codeNull();
-                _row.Setfasl_codeNull();
-                _row.Setstu_codeNull();
-            }
 
             if (ofd.FileName == string.Empty)
                 DialogResult = System.Windows.Forms.DialogResult.OK;

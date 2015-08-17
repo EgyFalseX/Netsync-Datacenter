@@ -119,6 +119,12 @@
     <Reference Include="DevExpress.XtraWizard.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
+    <Reference Include="FXFW">
+      <HintPath>..\..\FXFW\Releases\FXFW.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>C:\Ionic.Zip.dll</HintPath>
+    </Reference>
     <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\log4net.dll</HintPath>
@@ -452,7 +458,6 @@
     <None Include="DataSources\dsDataCenter.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsDataCenter1.Designer.cs</LastGenOutput>
     </None>
     <None Include="DataSources\dsDataCenter.xss">
       <DependentUpon>dsDataCenter.xsd</DependentUpon>

@@ -12,6 +12,8 @@ namespace DataCenter
     {
         public static DataCenterX DC;
         private static readonly ILog Logger = LogManager.GetLogger(typeof(Program));
+        public static string updatePath = Application.StartupPath + @"\zUpdateObject.exe";
+        public static string updaterPath = Application.StartupPath + @"\Updater.exe";
 
         /// <summary>
         /// The main entry point for the application.

@@ -24,7 +24,10 @@ namespace DataCenter.Uti
             SPQry = 1,
             Dashboard = 2
         }
-
+        public enum AppOptionName
+        {
+            MinAppVersion
+        }
 
 
 

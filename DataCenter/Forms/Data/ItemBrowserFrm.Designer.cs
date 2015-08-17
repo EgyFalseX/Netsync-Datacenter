@@ -80,11 +80,6 @@
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.colCanWrite = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCanDelete = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colasase_year = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colstu_name = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colalsofof_name = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colfasl_name = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.qryCategoryTableAdapter = new DataCenter.DataSources.dsQueriesTableAdapters.QryCategoryTableAdapter();
             this.contextMenuStripFile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qryItemsBindingSource)).BeginInit();
@@ -411,12 +406,7 @@
             this.colTypeName,
             this.colCanInsert,
             this.colCanWrite,
-            this.colCanDelete,
-            this.colasase_year,
-            this.colstu_name,
-            this.colalsofof_name,
-            this.colfasl_name,
-            this.colName});
+            this.colCanDelete});
             this.gridViewFiles.GridControl = this.gridControlFiles;
             this.gridViewFiles.Name = "gridViewFiles";
             this.gridViewFiles.OptionsBehavior.Editable = false;
@@ -498,7 +488,7 @@
             this.colCreateIn.FieldName = "CreateIn";
             this.colCreateIn.Name = "colCreateIn";
             this.colCreateIn.Visible = true;
-            this.colCreateIn.VisibleIndex = 10;
+            this.colCreateIn.VisibleIndex = 5;
             this.colCreateIn.Width = 77;
             // 
             // repositoryItemDateEditDMY
@@ -525,7 +515,7 @@
             this.colRealName.FieldName = "RealNameOwner";
             this.colRealName.Name = "colRealName";
             this.colRealName.Visible = true;
-            this.colRealName.VisibleIndex = 11;
+            this.colRealName.VisibleIndex = 6;
             this.colRealName.Width = 105;
             // 
             // colModifyIn
@@ -539,7 +529,7 @@
             this.colModifyIn.FieldName = "ModifyIn";
             this.colModifyIn.Name = "colModifyIn";
             this.colModifyIn.Visible = true;
-            this.colModifyIn.VisibleIndex = 12;
+            this.colModifyIn.VisibleIndex = 7;
             this.colModifyIn.Width = 87;
             // 
             // colRealNameLastEdit
@@ -552,7 +542,7 @@
             this.colRealNameLastEdit.FieldName = "RealNameLastEdit";
             this.colRealNameLastEdit.Name = "colRealNameLastEdit";
             this.colRealNameLastEdit.Visible = true;
-            this.colRealNameLastEdit.VisibleIndex = 13;
+            this.colRealNameLastEdit.VisibleIndex = 8;
             this.colRealNameLastEdit.Width = 100;
             // 
             // colLocker
@@ -566,7 +556,7 @@
             this.colLocker.FieldName = "Locker";
             this.colLocker.Name = "colLocker";
             this.colLocker.Visible = true;
-            this.colLocker.VisibleIndex = 14;
+            this.colLocker.VisibleIndex = 9;
             this.colLocker.Width = 45;
             // 
             // repositoryItemCheckEdit2
@@ -607,7 +597,7 @@
             this.colCanInsert.FieldName = "CanInsert";
             this.colCanInsert.Name = "colCanInsert";
             this.colCanInsert.Visible = true;
-            this.colCanInsert.VisibleIndex = 15;
+            this.colCanInsert.VisibleIndex = 10;
             this.colCanInsert.Width = 93;
             // 
             // repositoryItemCheckEdit1
@@ -628,7 +618,7 @@
             this.colCanWrite.FieldName = "CanWrite";
             this.colCanWrite.Name = "colCanWrite";
             this.colCanWrite.Visible = true;
-            this.colCanWrite.VisibleIndex = 16;
+            this.colCanWrite.VisibleIndex = 11;
             this.colCanWrite.Width = 93;
             // 
             // colCanDelete
@@ -642,70 +632,8 @@
             this.colCanDelete.FieldName = "CanDelete";
             this.colCanDelete.Name = "colCanDelete";
             this.colCanDelete.Visible = true;
-            this.colCanDelete.VisibleIndex = 17;
+            this.colCanDelete.VisibleIndex = 12;
             this.colCanDelete.Width = 89;
-            // 
-            // colasase_year
-            // 
-            this.colasase_year.AppearanceCell.Options.UseTextOptions = true;
-            this.colasase_year.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colasase_year.AppearanceHeader.Options.UseTextOptions = true;
-            this.colasase_year.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colasase_year.Caption = "السنة";
-            this.colasase_year.FieldName = "asase_year";
-            this.colasase_year.Name = "colasase_year";
-            this.colasase_year.Visible = true;
-            this.colasase_year.VisibleIndex = 5;
-            // 
-            // colstu_name
-            // 
-            this.colstu_name.AppearanceCell.Options.UseTextOptions = true;
-            this.colstu_name.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colstu_name.AppearanceHeader.Options.UseTextOptions = true;
-            this.colstu_name.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colstu_name.Caption = "اسم الطالب";
-            this.colstu_name.FieldName = "stu_name";
-            this.colstu_name.Name = "colstu_name";
-            this.colstu_name.Visible = true;
-            this.colstu_name.VisibleIndex = 6;
-            this.colstu_name.Width = 89;
-            // 
-            // colalsofof_name
-            // 
-            this.colalsofof_name.AppearanceCell.Options.UseTextOptions = true;
-            this.colalsofof_name.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colalsofof_name.AppearanceHeader.Options.UseTextOptions = true;
-            this.colalsofof_name.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colalsofof_name.Caption = "الصف";
-            this.colalsofof_name.FieldName = "alsofof_name";
-            this.colalsofof_name.Name = "colalsofof_name";
-            this.colalsofof_name.Visible = true;
-            this.colalsofof_name.VisibleIndex = 7;
-            // 
-            // colfasl_name
-            // 
-            this.colfasl_name.AppearanceCell.Options.UseTextOptions = true;
-            this.colfasl_name.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colfasl_name.AppearanceHeader.Options.UseTextOptions = true;
-            this.colfasl_name.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colfasl_name.Caption = "الفصل";
-            this.colfasl_name.FieldName = "fasl_name";
-            this.colfasl_name.Name = "colfasl_name";
-            this.colfasl_name.Visible = true;
-            this.colfasl_name.VisibleIndex = 8;
-            // 
-            // colName
-            // 
-            this.colName.AppearanceCell.Options.UseTextOptions = true;
-            this.colName.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colName.AppearanceHeader.Options.UseTextOptions = true;
-            this.colName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colName.Caption = "اسم الموظف";
-            this.colName.FieldName = "Name";
-            this.colName.Name = "colName";
-            this.colName.Visible = true;
-            this.colName.VisibleIndex = 9;
-            this.colName.Width = 93;
             // 
             // qryCategoryTableAdapter
             // 
@@ -800,10 +728,5 @@
         private System.Windows.Forms.ToolStripMenuItem categoryHistoryToolStripMenuItem;
         private DevExpress.Utils.SharedImageCollection sharedImageCollectionCategory;
         private System.Windows.Forms.ToolStripMenuItem viewFileToolStripMenuItem;
-        private DevExpress.XtraGrid.Columns.GridColumn colasase_year;
-        private DevExpress.XtraGrid.Columns.GridColumn colstu_name;
-        private DevExpress.XtraGrid.Columns.GridColumn colalsofof_name;
-        private DevExpress.XtraGrid.Columns.GridColumn colfasl_name;
-        private DevExpress.XtraGrid.Columns.GridColumn colName;
     }
 }

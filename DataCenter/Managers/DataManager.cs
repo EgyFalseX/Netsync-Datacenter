@@ -8,6 +8,7 @@ using DevExpress.XtraSplashScreen;
 using System.Data.SqlClient;
 using log4net;
 using System.Data;
+using System.IO;
 
 namespace DataCenter.Managers
 {
@@ -26,12 +27,9 @@ namespace DataCenter.Managers
         DataSources.dsDataCenterTableAdapters.ItemUserTableAdapter adpItemUser;
         DataSources.dsDataCenterTableAdapters.LogsTableAdapter adpLogs;
 
-        DataSources.dsQueriesTableAdapters.EmpTableAdapter adpEmp;
-        DataSources.dsQueriesTableAdapters.asaseTableAdapter adpasase;
-        DataSources.dsQueriesTableAdapters.alsofofTableAdapter adpalsofof;
-        DataSources.dsQueriesTableAdapters.faslTableAdapter adpfasl;
-        DataSources.dsQueriesTableAdapters.StudentTableAdapter adpStudent;
-
+        public static Char SplitChar = Convert.ToChar("|");
+        public static string DecryptPassword = "FalseX";
+        //public static Data.dsDataTableAdapters.QueriesTableAdapter adpQry = new Data.dsDataTableAdapters.QueriesTableAdapter();
         #endregion
         #region -   Functions   -
         public DataManager()
@@ -44,13 +42,6 @@ namespace DataCenter.Managers
             adpCategoryUser = new DataSources.dsDataCenterTableAdapters.CategoryUserTableAdapter();
             adpItemUser = new DataSources.dsDataCenterTableAdapters.ItemUserTableAdapter();
             adpLogs = new DataSources.dsDataCenterTableAdapters.LogsTableAdapter();
-
-            adpEmp = new DataSources.dsQueriesTableAdapters.EmpTableAdapter();
-            adpasase = new DataSources.dsQueriesTableAdapters.asaseTableAdapter();
-            adpalsofof = new DataSources.dsQueriesTableAdapters.alsofofTableAdapter();
-            adpfasl = new DataSources.dsQueriesTableAdapters.faslTableAdapter();
-            adpStudent = new DataSources.dsQueriesTableAdapters.StudentTableAdapter();
-
         }
         public static bool Init()
         {
@@ -59,12 +50,6 @@ namespace DataCenter.Managers
                 defaultInstance = new DataManager();
                 if (!defaultInstance.CreateDefaultData())
                     return false;
-                //Load School Data
-                defaultInstance.adpEmp.Fill(defaultInstance.dsQry.Emp);
-                defaultInstance.adpasase.Fill(defaultInstance.dsQry.asase);
-                defaultInstance.adpalsofof.Fill(defaultInstance.dsQry.alsofof);
-                defaultInstance.adpfasl.Fill(defaultInstance.dsQry.fasl);
-                defaultInstance.adpStudent.Fill(defaultInstance.dsQry.Student);
                 DataCenterX.LogMessage("Init ... Done", typeof(DataManager), nsLib.Utilities.Types.MessageType.Debug);
                 return true;
             }
@@ -229,7 +214,6 @@ namespace DataCenter.Managers
         {
             return adpLogs.ScalarQueryGetLockUser(ItemId).ToString();
         }
-
         public bool MoveCategoryInheritancePrivilages(int CategoryId, int NewParentId)
         {
             SqlConnection con = new SqlConnection(Properties.Settings.Default.DataCenterConnectionString);
@@ -360,7 +344,6 @@ namespace DataCenter.Managers
             con.Close(); con.Dispose(); cmd.Dispose(); adp.Dispose();
             return true;
         }
-
         public void GetFormPriv(int UserID, string FormName, ref bool Selecting, ref bool Inserting, ref bool Updateing, ref bool Deleting)
         {
             Selecting = false; Inserting = false; Updateing = false; Deleting = false;
@@ -386,8 +369,30 @@ namespace DataCenter.Managers
                     Deleting = row.Deleting;
             }
         }
+        public static bool VersionExpired()
+        {
+            
+            try
+            {
+                int currentVersion = Convert.ToInt32(System.Windows.Forms.Application.ProductVersion.Replace(".", ""));
+                object MinAppVersion = new DataSources.dsDataCenterTableAdapters.QueriesTableAdapter().GetAppOptionValue(Uti.Types.AppOptionName.MinAppVersion.ToString());
 
-
+                if (MinAppVersion == null)
+                    return true;
+                else
+                {
+                    if (currentVersion < Convert.ToInt32(MinAppVersion))
+                        return true;
+                    else
+                        return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                DataCenterX.LogMessage(ex.Message, typeof(DataManager), nsLib.Utilities.Types.MessageType.Error, ex, true);
+                return true;
+            }
+        }
         public static Dictionary<string, int> GetCurrentAssemblyFiles()
         {
             Dictionary<string, int> Asm = new Dictionary<string, int>();
@@ -457,21 +462,39 @@ namespace DataCenter.Managers
             {
                 process.Start();
             }
+            System.Diagnostics.Process.GetCurrentProcess().Kill();
+        }
+        public static void PerformUpdaterUpload(Dictionary<string, int> FilesList)
+        {
+            string Data = String.Format("{0}{1}{2}{1}", (int)Uti.Types.UpdaterArgsEnum.Upload, SplitChar, Properties.Settings.Default.DataCenterConnectionString);
+
+            foreach (KeyValuePair<string, int> item in FilesList)
+            {
+                Data += String.Format("{0}{1}{2}{1}", item.Key, SplitChar, item.Value);
+            }
+            Data = Data.Substring(0, Data.Length - 1);
+
+
+            //Data = FXFW.EncDec.Encrypt(Data, "FalseX");// Encrypt Arg Data
+            Data = String.Format("\"{0}\"", Data);
+            using (System.Diagnostics.Process process = new System.Diagnostics.Process() { StartInfo = new System.Diagnostics.ProcessStartInfo(Program.updaterPath, Data) })
+            {
+                process.Start();
+            }
 
             System.Diagnostics.Process.GetCurrentProcess().Kill();
-
         }
         public static Dictionary<string, int> GetUploadDependanceies()
         {
             Dictionary<string, int> NeededFiles = new Dictionary<string, int>();
-            using (NICSQLTools.Data.dsDataTableAdapters.AppDependenceFileTableAdapter adpQry = new Data.dsDataTableAdapters.AppDependenceFileTableAdapter())
+            using (DataCenter.DataSources.dsDataCenterTableAdapters.AppDependenceFileTableAdapter adpQry = new DataSources.dsDataCenterTableAdapters.AppDependenceFileTableAdapter())
             {
-                NICSQLTools.Data.dsData.AppDependenceFileDataTable RequiredFilesTbl = new Data.dsData.AppDependenceFileDataTable();
+                DataCenter.DataSources.dsDataCenter.AppDependenceFileDataTable RequiredFilesTbl = new DataCenter.DataSources.dsDataCenter.AppDependenceFileDataTable();
                 adpQry.FillByLiteData(RequiredFilesTbl);
                 Dictionary<string, int> AppFiles = GetCurrentAssemblyFiles();
                 foreach (KeyValuePair<string, int> item in AppFiles)
                 {
-                    Data.dsData.AppDependenceFileRow row = RequiredFilesTbl.FindByFileName(item.Key);
+                    DataCenter.DataSources.dsDataCenter.AppDependenceFileRow row = RequiredFilesTbl.FindByFileName(item.Key);
                     if (row == null)
                         NeededFiles.Add(item.Key, item.Value);
                     else
@@ -483,7 +506,31 @@ namespace DataCenter.Managers
             }
             return NeededFiles;
         }
-
+        public static MemoryStream CompressFile(byte[] date)
+        {
+            using (Ionic.Zip.ZipFile zFile = new Ionic.Zip.ZipFile())
+            {
+                zFile.CompressionLevel = Ionic.Zlib.CompressionLevel.BestCompression;
+                zFile.Comment = String.Format("This zip archive was created by the CreateZip example application on machine '{0}'", System.Net.Dns.GetHostName());
+                zFile.AddEntry("zUpdateObject.exe", date);
+                MemoryStream ms = new MemoryStream();
+                zFile.Save(ms);
+                return ms;
+            }
+        }
+        public static MemoryStream DecompressFile(byte[] data)
+        {
+            MemoryStream ms = new MemoryStream();
+            using (Ionic.Zip.ZipFile zFile = Ionic.Zip.ZipFile.Read(new MemoryStream(data)))
+            {
+                foreach (Ionic.Zip.ZipEntry entry in zFile)
+                {
+                    entry.Extract(ms);
+                }
+            }
+            return ms;
+        }
+        
         #endregion
         
     }

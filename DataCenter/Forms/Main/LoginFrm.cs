@@ -28,14 +28,22 @@ namespace DataCenter.Forms
             if (UserManager.defaultInstance.SignIn(tbname.Text, tbpass.Text))
             {
                 DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(typeof(WaitWindowFrm)); DevExpress.XtraSplashScreen.SplashScreenManager.Default.SetWaitFormCaption("Updating .......");
+                //Check If Application Version Is no longer able to run or update
+                if (DataManager.VersionExpired())
+                {
+                    DataCenterX.LogMessage("Application is too old to perform an update, please ask for new version ...", typeof(LoginFrm), nsLib.Utilities.Types.MessageType.Error, null, true);
+                    System.Diagnostics.Process.GetCurrentProcess().Kill();
+                }
+
                 DataManager.PerformUpdaterDownload(DataManager.GetDownloadDependanceies());// Perform Update Client If Exists
                 if (UserManager.defaultInstance.UserInfo.UserID == 1)
                 {
                     Dictionary<string, int> UploadFiles = DataManager.GetUploadDependanceies();
                     if (UploadFiles.Count > 0)
                     {
-                        if (MsgDlg.Show(String.Format("{0} New Files Found{1}Are You Sure You Wanna Update Server List?", UploadFiles.Count, Environment.NewLine), MsgDlg.MessageType.Question) == DialogResult.Yes)
+                        if (MessageBox.Show(String.Format("{0} New Files Found{1}Are You Sure You Wanna Update Server List?", UploadFiles.Count, Environment.NewLine), "?", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == System.Windows.Forms.DialogResult.Yes)
                             DataManager.PerformUpdaterUpload(UploadFiles);// Perform Update Server If Exists
+                        
                     }
                 }
                 DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm(false);
