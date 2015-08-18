@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategoryEditorDLG));
             this.lblParentName = new DevExpress.XtraEditors.LabelControl();
             this.lblModifyIn = new DevExpress.XtraEditors.LabelControl();
@@ -50,7 +51,7 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPageEdit = new DevExpress.XtraTab.XtraTabPage();
             this.icbeIconId = new DevExpress.XtraEditors.ImageComboBoxEdit();
-            this.imageCollectionIcon = new DevExpress.Utils.ImageCollection();
+            this.imageCollectionIcon = new DevExpress.Utils.ImageCollection(this.components);
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabPageInfo = new DevExpress.XtraTab.XtraTabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -74,7 +75,7 @@
             this.lblParentName.Location = new System.Drawing.Point(195, 2);
             this.lblParentName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblParentName.Name = "lblParentName";
-            this.lblParentName.Size = new System.Drawing.Size(15, 16);
+            this.lblParentName.Size = new System.Drawing.Size(15, 17);
             this.lblParentName.TabIndex = 1;
             this.lblParentName.Text = "---";
             // 
@@ -84,7 +85,7 @@
             this.lblModifyIn.Location = new System.Drawing.Point(195, 65);
             this.lblModifyIn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblModifyIn.Name = "lblModifyIn";
-            this.lblModifyIn.Size = new System.Drawing.Size(15, 16);
+            this.lblModifyIn.Size = new System.Drawing.Size(15, 17);
             this.lblModifyIn.TabIndex = 0;
             this.lblModifyIn.Text = "---";
             // 
@@ -114,7 +115,7 @@
             this.lblCreateIn.Location = new System.Drawing.Point(195, 44);
             this.lblCreateIn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblCreateIn.Name = "lblCreateIn";
-            this.lblCreateIn.Size = new System.Drawing.Size(15, 16);
+            this.lblCreateIn.Size = new System.Drawing.Size(15, 17);
             this.lblCreateIn.TabIndex = 0;
             this.lblCreateIn.Text = "---";
             // 
@@ -124,7 +125,7 @@
             this.lblCategoryCount.Location = new System.Drawing.Point(195, 86);
             this.lblCategoryCount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblCategoryCount.Name = "lblCategoryCount";
-            this.lblCategoryCount.Size = new System.Drawing.Size(15, 16);
+            this.lblCategoryCount.Size = new System.Drawing.Size(15, 17);
             this.lblCategoryCount.TabIndex = 0;
             this.lblCategoryCount.Text = "---";
             // 
@@ -134,7 +135,7 @@
             this.lblUserIn.Location = new System.Drawing.Point(195, 23);
             this.lblUserIn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblUserIn.Name = "lblUserIn";
-            this.lblUserIn.Size = new System.Drawing.Size(15, 16);
+            this.lblUserIn.Size = new System.Drawing.Size(15, 17);
             this.lblUserIn.TabIndex = 0;
             this.lblUserIn.Text = "---";
             // 
@@ -261,7 +262,6 @@
             this.xtraTabControl1.HeaderAutoFill = DevExpress.Utils.DefaultBoolean.True;
             this.xtraTabControl1.Location = new System.Drawing.Point(12, 12);
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.PageImagePosition = DevExpress.XtraTab.TabPageImagePosition.Far;
             this.xtraTabControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPageEdit;
             this.xtraTabControl1.Size = new System.Drawing.Size(334, 300);
@@ -354,7 +354,7 @@
             this.lblItemCount.Location = new System.Drawing.Point(195, 107);
             this.lblItemCount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblItemCount.Name = "lblItemCount";
-            this.lblItemCount.Size = new System.Drawing.Size(15, 16);
+            this.lblItemCount.Size = new System.Drawing.Size(15, 17);
             this.lblItemCount.TabIndex = 2;
             this.lblItemCount.Text = "---";
             // 

@@ -48,7 +48,6 @@
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabControlMain = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPageEdit = new DevExpress.XtraTab.XtraTabPage();
-            this.dsQueries = new DataCenter.DataSources.dsQueries();
             this.btnDownload = new DevExpress.XtraEditors.SimpleButton();
             this.btnUpload = new DevExpress.XtraEditors.SimpleButton();
             this.lueTypeId = new DevExpress.XtraEditors.GridLookUpEdit();
@@ -64,6 +63,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblLockByLable = new DevExpress.XtraEditors.LabelControl();
             this.lblLockBy = new DevExpress.XtraEditors.LabelControl();
+            this.dsQueries = new DataCenter.DataSources.dsQueries();
             this.pbc = new DevExpress.XtraEditors.ProgressBarControl();
             this.ofd = new System.Windows.Forms.OpenFileDialog();
             this.sfd = new System.Windows.Forms.SaveFileDialog();
@@ -79,7 +79,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControlMain)).BeginInit();
             this.xtraTabControlMain.SuspendLayout();
             this.xtraTabPageEdit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dsQueries)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueTypeId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDataCenter)).BeginInit();
@@ -87,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             this.xtraTabPageInfo.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dsQueries)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlProgress)).BeginInit();
             this.pnlProgress.SuspendLayout();
@@ -98,7 +98,7 @@
             this.lblParentName.Location = new System.Drawing.Point(195, 2);
             this.lblParentName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblParentName.Name = "lblParentName";
-            this.lblParentName.Size = new System.Drawing.Size(15, 16);
+            this.lblParentName.Size = new System.Drawing.Size(15, 17);
             this.lblParentName.TabIndex = 1;
             this.lblParentName.Text = "---";
             // 
@@ -108,7 +108,7 @@
             this.lblModifyIn.Location = new System.Drawing.Point(195, 65);
             this.lblModifyIn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblModifyIn.Name = "lblModifyIn";
-            this.lblModifyIn.Size = new System.Drawing.Size(15, 16);
+            this.lblModifyIn.Size = new System.Drawing.Size(15, 17);
             this.lblModifyIn.TabIndex = 0;
             this.lblModifyIn.Text = "---";
             // 
@@ -128,7 +128,7 @@
             this.lblCreateIn.Location = new System.Drawing.Point(195, 44);
             this.lblCreateIn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblCreateIn.Name = "lblCreateIn";
-            this.lblCreateIn.Size = new System.Drawing.Size(15, 16);
+            this.lblCreateIn.Size = new System.Drawing.Size(15, 17);
             this.lblCreateIn.TabIndex = 0;
             this.lblCreateIn.Text = "---";
             // 
@@ -138,7 +138,7 @@
             this.lblUserIn.Location = new System.Drawing.Point(195, 23);
             this.lblUserIn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblUserIn.Name = "lblUserIn";
-            this.lblUserIn.Size = new System.Drawing.Size(15, 16);
+            this.lblUserIn.Size = new System.Drawing.Size(15, 17);
             this.lblUserIn.TabIndex = 0;
             this.lblUserIn.Text = "---";
             // 
@@ -276,7 +276,6 @@
             this.xtraTabControlMain.HeaderAutoFill = DevExpress.Utils.DefaultBoolean.True;
             this.xtraTabControlMain.Location = new System.Drawing.Point(12, 12);
             this.xtraTabControlMain.Name = "xtraTabControlMain";
-            this.xtraTabControlMain.PageImagePosition = DevExpress.XtraTab.TabPageImagePosition.Far;
             this.xtraTabControlMain.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.xtraTabControlMain.SelectedTabPage = this.xtraTabPageEdit;
             this.xtraTabControlMain.Size = new System.Drawing.Size(334, 326);
@@ -300,11 +299,6 @@
             this.xtraTabPageEdit.Name = "xtraTabPageEdit";
             this.xtraTabPageEdit.Size = new System.Drawing.Size(328, 279);
             this.xtraTabPageEdit.Text = "تفاصيل  ";
-            // 
-            // dsQueries
-            // 
-            this.dsQueries.DataSetName = "dsQueries";
-            this.dsQueries.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnDownload
             // 
@@ -464,10 +458,15 @@
             this.lblLockBy.Location = new System.Drawing.Point(195, 86);
             this.lblLockBy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblLockBy.Name = "lblLockBy";
-            this.lblLockBy.Size = new System.Drawing.Size(15, 16);
+            this.lblLockBy.Size = new System.Drawing.Size(15, 17);
             this.lblLockBy.TabIndex = 3;
             this.lblLockBy.Text = "---";
             this.lblLockBy.Visible = false;
+            // 
+            // dsQueries
+            // 
+            this.dsQueries.DataSetName = "dsQueries";
+            this.dsQueries.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pbc
             // 
@@ -544,7 +543,6 @@
             this.xtraTabControlMain.ResumeLayout(false);
             this.xtraTabPageEdit.ResumeLayout(false);
             this.xtraTabPageEdit.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dsQueries)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueTypeId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDataCenter)).EndInit();
@@ -553,6 +551,7 @@
             this.xtraTabPageInfo.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dsQueries)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlProgress)).EndInit();
             this.pnlProgress.ResumeLayout(false);

@@ -17,13 +17,13 @@ namespace DataCenter
             {
                 con.Open();
 
-                if (CheckViewExists("vStudent"))
-                {
-                    cmd.CommandText = DropObject("vStudent");
-                    cmd.ExecuteNonQuery();
-                }
-                cmd.CommandText = vStudent;
-                cmd.ExecuteNonQuery();
+                //if (CheckViewExists("vStudent"))
+                //{
+                //    cmd.CommandText = DropObject("vStudent");
+                //    cmd.ExecuteNonQuery();
+                //}
+                //cmd.CommandText = vStudent;
+                //cmd.ExecuteNonQuery();
             }
             catch (SqlException ex)
             {

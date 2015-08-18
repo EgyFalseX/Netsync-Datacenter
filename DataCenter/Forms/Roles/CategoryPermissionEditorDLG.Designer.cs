@@ -185,7 +185,6 @@
             this.xtraTabControl1.HeaderAutoFill = DevExpress.Utils.DefaultBoolean.True;
             this.xtraTabControl1.Location = new System.Drawing.Point(12, 12);
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.PageImagePosition = DevExpress.XtraTab.TabPageImagePosition.Far;
             this.xtraTabControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPageUser;
             this.xtraTabControl1.Size = new System.Drawing.Size(815, 270);

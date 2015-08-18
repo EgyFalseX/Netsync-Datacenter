@@ -242,7 +242,6 @@
             this.xtraTabControl1.HeaderAutoFill = DevExpress.Utils.DefaultBoolean.True;
             this.xtraTabControl1.Location = new System.Drawing.Point(12, 12);
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.PageImagePosition = DevExpress.XtraTab.TabPageImagePosition.Far;
             this.xtraTabControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPageUser;
             this.xtraTabControl1.Size = new System.Drawing.Size(815, 270);
@@ -1448,7 +1447,7 @@
             // 
             this.itemRoleTableAdapter.ClearBeforeFill = true;
             // 
-            // FilePermissionEditorDLG
+            // ItemPermissionEditorDLG
             // 
             this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1460,7 +1459,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
-            this.Name = "FilePermissionEditorDLG";
+            this.Name = "ItemPermissionEditorDLG";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "محرر الصلاحيات";
