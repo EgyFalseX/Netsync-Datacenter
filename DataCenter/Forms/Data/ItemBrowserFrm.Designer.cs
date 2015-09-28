@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemBrowserFrm));
-            this.contextMenuStripFile = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStripFile = new System.Windows.Forms.ContextMenuStrip();
             this.viewFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.addFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,7 +39,7 @@
             this.fileAdminLevelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filePermissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.qryItemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qryItemsBindingSource = new System.Windows.Forms.BindingSource();
             this.dsQueries = new DataCenter.DataSources.dsQueries();
             this.qryItemsTableAdapter = new DataCenter.DataSources.dsQueriesTableAdapters.QryItemsTableAdapter();
             this.dsDataCenter = new DataCenter.DataSources.dsDataCenter();
@@ -48,7 +47,7 @@
             this.splitContainerControl = new DevExpress.XtraEditors.SplitContainerControl();
             this.tlCategory = new DevExpress.XtraTreeList.TreeList();
             this.colCategoryName1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.contextMenuStripCaterogy = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStripCaterogy = new System.Windows.Forms.ContextMenuStrip();
             this.addSubCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addMainCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -58,8 +57,8 @@
             this.categoryAdminLevelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoryPermissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoryHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.qryCategoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sharedImageCollectionCategory = new DevExpress.Utils.SharedImageCollection(this.components);
+            this.qryCategoryBindingSource = new System.Windows.Forms.BindingSource();
+            this.sharedImageCollectionCategory = new DevExpress.Utils.SharedImageCollection();
             this.gridControlFiles = new DevExpress.XtraGrid.GridControl();
             this.gridViewFiles = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colTypeIconData = new DevExpress.XtraGrid.Columns.GridColumn();

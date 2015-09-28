@@ -28,17 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppRoleFrm));
             this.groupControlUpdate = new DevExpress.XtraEditors.GroupControl();
-            this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
-            this.popupControlContainer2 = new DevExpress.XtraBars.PopupControlContainer(this.components);
+            this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu();
+            this.popupControlContainer2 = new DevExpress.XtraBars.PopupControlContainer();
             this.buttonEdit = new DevExpress.XtraEditors.ButtonEdit();
-            this.popupControlContainer1 = new DevExpress.XtraBars.PopupControlContainer(this.components);
+            this.popupControlContainer1 = new DevExpress.XtraBars.PopupControlContainer();
             this.someLabelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.someLabelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.ribbonImageCollection = new DevExpress.Utils.ImageCollection(this.components);
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.CEUpdate = new DevExpress.XtraEditors.CheckEdit();
+            this.CESelect = new DevExpress.XtraEditors.CheckEdit();
+            this.CEDelete = new DevExpress.XtraEditors.CheckEdit();
+            this.CEInsert = new DevExpress.XtraEditors.CheckEdit();
+            this.groupControlSelect = new DevExpress.XtraEditors.GroupControl();
+            this.LUEItems = new DevExpress.XtraEditors.LookUpEdit();
+            this.rolesBindingSource = new System.Windows.Forms.BindingSource();
+            this.dsDataCenter = new DataCenter.DataSources.dsDataCenter();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.rolesTableAdapter = new DataCenter.DataSources.dsDataCenterTableAdapters.RolesTableAdapter();
+            this.appRoleBindingSource = new System.Windows.Forms.BindingSource();
+            this.appRoleTableAdapter = new DataCenter.DataSources.dsDataCenterTableAdapters.AppRoleTableAdapter();
+            this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.ribbonImageCollection = new DevExpress.Utils.ImageCollection();
             this.iExit = new DevExpress.XtraBars.BarButtonItem();
             this.iHelp = new DevExpress.XtraBars.BarButtonItem();
             this.iAbout = new DevExpress.XtraBars.BarButtonItem();
@@ -55,9 +67,11 @@
             this.bbiDeletedCategory = new DevExpress.XtraBars.BarButtonItem();
             this.bbiDebugLogs = new DevExpress.XtraBars.BarButtonItem();
             this.bbiAppRole = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
+            this.bbiSearchItem = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection();
             this.homeRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.fileRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.searchRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.PrivRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.skinsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.exitRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -65,30 +79,14 @@
             this.helpRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageDebug = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroupDebugLog = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.CEUpdate = new DevExpress.XtraEditors.CheckEdit();
-            this.CESelect = new DevExpress.XtraEditors.CheckEdit();
-            this.CEDelete = new DevExpress.XtraEditors.CheckEdit();
-            this.CEInsert = new DevExpress.XtraEditors.CheckEdit();
-            this.groupControlSelect = new DevExpress.XtraEditors.GroupControl();
-            this.LUEItems = new DevExpress.XtraEditors.LookUpEdit();
-            this.rolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsDataCenter = new DataCenter.DataSources.dsDataCenter();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.rolesTableAdapter = new DataCenter.DataSources.dsDataCenterTableAdapters.RolesTableAdapter();
-            this.appRoleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.appRoleTableAdapter = new DataCenter.DataSources.dsDataCenterTableAdapters.AppRoleTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlUpdate)).BeginInit();
             this.groupControlUpdate.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer2)).BeginInit();
             this.popupControlContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
             this.popupControlContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollectionLarge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CEUpdate.Properties)).BeginInit();
@@ -101,6 +99,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDataCenter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appRoleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollectionLarge)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControlUpdate
@@ -117,43 +118,6 @@
             this.groupControlUpdate.Size = new System.Drawing.Size(963, 251);
             this.groupControlUpdate.TabIndex = 1;
             this.groupControlUpdate.Text = "التفاصيل";
-            // 
-            // ribbonControl
-            // 
-            this.ribbonControl.ApplicationButtonDropDownControl = this.appMenu;
-            this.ribbonControl.ApplicationButtonText = null;
-            this.ribbonControl.ExpandCollapseItem.Id = 0;
-            this.ribbonControl.Images = this.ribbonImageCollection;
-            this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.ribbonControl.ExpandCollapseItem,
-            this.iExit,
-            this.iHelp,
-            this.iAbout,
-            this.siStatus,
-            this.siInfo,
-            this.rgbiSkins,
-            this.bbiFileType,
-            this.bbiIcons,
-            this.bbiRole,
-            this.bbiUserRole,
-            this.bbiServerOptionWizard,
-            this.bbiUsers,
-            this.bbiDeletedItem,
-            this.bbiDeletedCategory,
-            this.bbiDebugLogs,
-            this.bbiAppRole});
-            this.ribbonControl.LargeImages = this.ribbonImageCollectionLarge;
-            this.ribbonControl.Location = new System.Drawing.Point(2, 21);
-            this.ribbonControl.MaxItemId = 72;
-            this.ribbonControl.Name = "ribbonControl";
-            this.ribbonControl.PageHeaderItemLinks.Add(this.iAbout);
-            this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.homeRibbonPage,
-            this.helpRibbonPage,
-            this.ribbonPageDebug});
-            this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl.Size = new System.Drawing.Size(959, 142);
-            this.ribbonControl.Toolbar.ItemLinks.Add(this.iHelp);
             // 
             // appMenu
             // 
@@ -213,6 +177,157 @@
             this.someLabelControl1.TabIndex = 0;
             this.someLabelControl1.Text = "No Info";
             // 
+            // groupControl2
+            // 
+            this.groupControl2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.groupControl2.AppearanceCaption.Options.UseTextOptions = true;
+            this.groupControl2.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.groupControl2.Controls.Add(this.CEUpdate);
+            this.groupControl2.Controls.Add(this.CESelect);
+            this.groupControl2.Controls.Add(this.CEDelete);
+            this.groupControl2.Controls.Add(this.CEInsert);
+            this.groupControl2.Location = new System.Drawing.Point(361, 169);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(240, 73);
+            this.groupControl2.TabIndex = 2;
+            this.groupControl2.Text = "عناصر السماح";
+            // 
+            // CEUpdate
+            // 
+            this.CEUpdate.Location = new System.Drawing.Point(21, 49);
+            this.CEUpdate.Name = "CEUpdate";
+            this.CEUpdate.Properties.Caption = "تعديل";
+            this.CEUpdate.Size = new System.Drawing.Size(75, 19);
+            this.CEUpdate.TabIndex = 0;
+            // 
+            // CESelect
+            // 
+            this.CESelect.Location = new System.Drawing.Point(21, 24);
+            this.CESelect.Name = "CESelect";
+            this.CESelect.Properties.Caption = "عرض";
+            this.CESelect.Size = new System.Drawing.Size(75, 19);
+            this.CESelect.TabIndex = 0;
+            // 
+            // CEDelete
+            // 
+            this.CEDelete.Location = new System.Drawing.Point(144, 49);
+            this.CEDelete.Name = "CEDelete";
+            this.CEDelete.Properties.Caption = "حذف";
+            this.CEDelete.Size = new System.Drawing.Size(75, 19);
+            this.CEDelete.TabIndex = 0;
+            // 
+            // CEInsert
+            // 
+            this.CEInsert.Location = new System.Drawing.Point(144, 24);
+            this.CEInsert.Name = "CEInsert";
+            this.CEInsert.Properties.Caption = "اضافه";
+            this.CEInsert.Size = new System.Drawing.Size(75, 19);
+            this.CEInsert.TabIndex = 0;
+            // 
+            // groupControlSelect
+            // 
+            this.groupControlSelect.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControlSelect.AppearanceCaption.Options.UseTextOptions = true;
+            this.groupControlSelect.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.groupControlSelect.Controls.Add(this.LUEItems);
+            this.groupControlSelect.Controls.Add(this.labelControl1);
+            this.groupControlSelect.Location = new System.Drawing.Point(9, 10);
+            this.groupControlSelect.Name = "groupControlSelect";
+            this.groupControlSelect.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupControlSelect.Size = new System.Drawing.Size(963, 59);
+            this.groupControlSelect.TabIndex = 0;
+            this.groupControlSelect.Text = "جميع السماحيات";
+            // 
+            // LUEItems
+            // 
+            this.LUEItems.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LUEItems.Location = new System.Drawing.Point(386, 28);
+            this.LUEItems.Name = "LUEItems";
+            this.LUEItems.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.LUEItems.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("RoleName", "اسم الصلاحيه", 20, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("RoleDesc", "تعليق", 20, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center)});
+            this.LUEItems.Properties.DataSource = this.rolesBindingSource;
+            this.LUEItems.Properties.DisplayMember = "RoleName";
+            this.LUEItems.Properties.NullText = "";
+            this.LUEItems.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.LUEItems.Properties.ValueMember = "RoleID";
+            this.LUEItems.Size = new System.Drawing.Size(173, 20);
+            this.LUEItems.TabIndex = 0;
+            this.LUEItems.EditValueChanged += new System.EventHandler(this.LUEItems_EditValueChanged);
+            // 
+            // rolesBindingSource
+            // 
+            this.rolesBindingSource.DataMember = "Roles";
+            this.rolesBindingSource.DataSource = this.dsDataCenter;
+            // 
+            // dsDataCenter
+            // 
+            this.dsDataCenter.DataSetName = "dsDataCenter";
+            this.dsDataCenter.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelControl1.Location = new System.Drawing.Point(565, 31);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(62, 13);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "اختار سماحيه";
+            // 
+            // rolesTableAdapter
+            // 
+            this.rolesTableAdapter.ClearBeforeFill = true;
+            // 
+            // appRoleBindingSource
+            // 
+            this.appRoleBindingSource.DataMember = "AppRole";
+            this.appRoleBindingSource.DataSource = this.dsDataCenter;
+            // 
+            // appRoleTableAdapter
+            // 
+            this.appRoleTableAdapter.ClearBeforeFill = true;
+            // 
+            // ribbonControl
+            // 
+            this.ribbonControl.ApplicationButtonDropDownControl = this.appMenu;
+            this.ribbonControl.ApplicationButtonText = null;
+            this.ribbonControl.ExpandCollapseItem.Id = 0;
+            this.ribbonControl.Images = this.ribbonImageCollection;
+            this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.ribbonControl.ExpandCollapseItem,
+            this.iExit,
+            this.iHelp,
+            this.iAbout,
+            this.siStatus,
+            this.siInfo,
+            this.rgbiSkins,
+            this.bbiFileType,
+            this.bbiIcons,
+            this.bbiRole,
+            this.bbiUserRole,
+            this.bbiServerOptionWizard,
+            this.bbiUsers,
+            this.bbiDeletedItem,
+            this.bbiDeletedCategory,
+            this.bbiDebugLogs,
+            this.bbiAppRole,
+            this.bbiSearchItem});
+            this.ribbonControl.LargeImages = this.ribbonImageCollectionLarge;
+            this.ribbonControl.Location = new System.Drawing.Point(2, 20);
+            this.ribbonControl.MaxItemId = 73;
+            this.ribbonControl.Name = "ribbonControl";
+            this.ribbonControl.PageHeaderItemLinks.Add(this.iAbout);
+            this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.homeRibbonPage,
+            this.helpRibbonPage,
+            this.ribbonPageDebug});
+            this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
+            this.ribbonControl.Size = new System.Drawing.Size(959, 141);
+            this.ribbonControl.Toolbar.ItemLinks.Add(this.iHelp);
+            // 
             // ribbonImageCollection
             // 
             this.ribbonImageCollection.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("ribbonImageCollection.ImageStream")));
@@ -229,6 +344,8 @@
             this.ribbonImageCollection.Images.SetKeyName(10, "DeletedCategories.png");
             this.ribbonImageCollection.Images.SetKeyName(11, "Debuglog.png");
             this.ribbonImageCollection.Images.SetKeyName(12, "AppRole.png");
+            this.ribbonImageCollection.InsertGalleryImage("find_16x16.png", "images/find/find_16x16.png", DevExpress.Images.ImageResourceCache.Default.GetImage("images/find/find_16x16.png"), 13);
+            this.ribbonImageCollection.Images.SetKeyName(13, "find_16x16.png");
             // 
             // iExit
             // 
@@ -382,6 +499,15 @@
             this.bbiAppRole.Name = "bbiAppRole";
             this.bbiAppRole.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             // 
+            // bbiSearchItem
+            // 
+            this.bbiSearchItem.Caption = "بحث";
+            this.bbiSearchItem.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
+            this.bbiSearchItem.Id = 72;
+            this.bbiSearchItem.ImageIndex = 13;
+            this.bbiSearchItem.LargeImageIndex = 13;
+            this.bbiSearchItem.Name = "bbiSearchItem";
+            // 
             // ribbonImageCollectionLarge
             // 
             this.ribbonImageCollectionLarge.ImageSize = new System.Drawing.Size(32, 32);
@@ -399,11 +525,14 @@
             this.ribbonImageCollectionLarge.Images.SetKeyName(10, "DeletedCategories.png");
             this.ribbonImageCollectionLarge.Images.SetKeyName(11, "Debuglog.png");
             this.ribbonImageCollectionLarge.Images.SetKeyName(12, "AppRole.png");
+            this.ribbonImageCollectionLarge.InsertGalleryImage("find_32x32.png", "images/find/find_32x32.png", DevExpress.Images.ImageResourceCache.Default.GetImage("images/find/find_32x32.png"), 13);
+            this.ribbonImageCollectionLarge.Images.SetKeyName(13, "find_32x32.png");
             // 
             // homeRibbonPage
             // 
             this.homeRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.fileRibbonPageGroup,
+            this.searchRibbonPageGroup,
             this.PrivRibbonPageGroup,
             this.skinsRibbonPageGroup,
             this.exitRibbonPageGroup});
@@ -419,6 +548,12 @@
             this.fileRibbonPageGroup.ItemLinks.Add(this.bbiDeletedCategory);
             this.fileRibbonPageGroup.Name = "fileRibbonPageGroup";
             this.fileRibbonPageGroup.Text = "بيانات اساسية";
+            // 
+            // searchRibbonPageGroup
+            // 
+            this.searchRibbonPageGroup.ItemLinks.Add(this.bbiSearchItem);
+            this.searchRibbonPageGroup.Name = "searchRibbonPageGroup";
+            this.searchRibbonPageGroup.Text = "بحث";
             // 
             // PrivRibbonPageGroup
             // 
@@ -470,119 +605,6 @@
             this.ribbonPageGroupDebugLog.Name = "ribbonPageGroupDebugLog";
             this.ribbonPageGroupDebugLog.Text = "Log";
             // 
-            // groupControl2
-            // 
-            this.groupControl2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.groupControl2.AppearanceCaption.Options.UseTextOptions = true;
-            this.groupControl2.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.groupControl2.Controls.Add(this.CEUpdate);
-            this.groupControl2.Controls.Add(this.CESelect);
-            this.groupControl2.Controls.Add(this.CEDelete);
-            this.groupControl2.Controls.Add(this.CEInsert);
-            this.groupControl2.Location = new System.Drawing.Point(361, 169);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(240, 73);
-            this.groupControl2.TabIndex = 2;
-            this.groupControl2.Text = "عناصر السماح";
-            // 
-            // CEUpdate
-            // 
-            this.CEUpdate.Location = new System.Drawing.Point(21, 49);
-            this.CEUpdate.Name = "CEUpdate";
-            this.CEUpdate.Properties.Caption = "تعديل";
-            this.CEUpdate.Size = new System.Drawing.Size(75, 19);
-            this.CEUpdate.TabIndex = 0;
-            // 
-            // CESelect
-            // 
-            this.CESelect.Location = new System.Drawing.Point(21, 24);
-            this.CESelect.Name = "CESelect";
-            this.CESelect.Properties.Caption = "عرض";
-            this.CESelect.Size = new System.Drawing.Size(75, 19);
-            this.CESelect.TabIndex = 0;
-            // 
-            // CEDelete
-            // 
-            this.CEDelete.Location = new System.Drawing.Point(144, 49);
-            this.CEDelete.Name = "CEDelete";
-            this.CEDelete.Properties.Caption = "حذف";
-            this.CEDelete.Size = new System.Drawing.Size(75, 19);
-            this.CEDelete.TabIndex = 0;
-            // 
-            // CEInsert
-            // 
-            this.CEInsert.Location = new System.Drawing.Point(144, 24);
-            this.CEInsert.Name = "CEInsert";
-            this.CEInsert.Properties.Caption = "اضافه";
-            this.CEInsert.Size = new System.Drawing.Size(75, 19);
-            this.CEInsert.TabIndex = 0;
-            // 
-            // groupControlSelect
-            // 
-            this.groupControlSelect.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupControlSelect.AppearanceCaption.Options.UseTextOptions = true;
-            this.groupControlSelect.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.groupControlSelect.Controls.Add(this.LUEItems);
-            this.groupControlSelect.Controls.Add(this.labelControl1);
-            this.groupControlSelect.Location = new System.Drawing.Point(9, 10);
-            this.groupControlSelect.Name = "groupControlSelect";
-            this.groupControlSelect.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupControlSelect.Size = new System.Drawing.Size(963, 59);
-            this.groupControlSelect.TabIndex = 0;
-            this.groupControlSelect.Text = "جميع السماحيات";
-            // 
-            // LUEItems
-            // 
-            this.LUEItems.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.LUEItems.Location = new System.Drawing.Point(386, 28);
-            this.LUEItems.Name = "LUEItems";
-            this.LUEItems.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.LUEItems.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("RoleName", "اسم الصلاحيه", 20, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("RoleDesc", "تعليق", 20, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center)});
-            this.LUEItems.Properties.DataSource = this.rolesBindingSource;
-            this.LUEItems.Properties.DisplayMember = "RoleName";
-            this.LUEItems.Properties.NullText = "";
-            this.LUEItems.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.LUEItems.Properties.ValueMember = "RoleID";
-            this.LUEItems.Size = new System.Drawing.Size(173, 20);
-            this.LUEItems.TabIndex = 0;
-            this.LUEItems.EditValueChanged += new System.EventHandler(this.LUEItems_EditValueChanged);
-            // 
-            // rolesBindingSource
-            // 
-            this.rolesBindingSource.DataMember = "Roles";
-            this.rolesBindingSource.DataSource = this.dsDataCenter;
-            // 
-            // dsDataCenter
-            // 
-            this.dsDataCenter.DataSetName = "dsDataCenter";
-            this.dsDataCenter.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelControl1.Location = new System.Drawing.Point(565, 31);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(62, 13);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "اختار سماحيه";
-            // 
-            // rolesTableAdapter
-            // 
-            this.rolesTableAdapter.ClearBeforeFill = true;
-            // 
-            // appRoleBindingSource
-            // 
-            this.appRoleBindingSource.DataMember = "AppRole";
-            this.appRoleBindingSource.DataSource = this.dsDataCenter;
-            // 
-            // appRoleTableAdapter
-            // 
-            this.appRoleTableAdapter.ClearBeforeFill = true;
-            // 
             // AppRoleFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -598,7 +620,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControlUpdate)).EndInit();
             this.groupControlUpdate.ResumeLayout(false);
             this.groupControlUpdate.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.appMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer2)).EndInit();
             this.popupControlContainer2.ResumeLayout(false);
@@ -606,8 +627,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).EndInit();
             this.popupControlContainer1.ResumeLayout(false);
             this.popupControlContainer1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollectionLarge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CEUpdate.Properties)).EndInit();
@@ -621,6 +640,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDataCenter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.appRoleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollectionLarge)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -647,7 +669,7 @@
         private DataSources.dsDataCenterTableAdapters.RolesTableAdapter rolesTableAdapter;
         private System.Windows.Forms.BindingSource appRoleBindingSource;
         private DataSources.dsDataCenterTableAdapters.AppRoleTableAdapter appRoleTableAdapter;
-        private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
+        public DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
         private DevExpress.Utils.ImageCollection ribbonImageCollection;
         private DevExpress.XtraBars.BarButtonItem iExit;
         private DevExpress.XtraBars.BarButtonItem iHelp;
@@ -665,9 +687,11 @@
         private DevExpress.XtraBars.BarButtonItem bbiDeletedCategory;
         private DevExpress.XtraBars.BarButtonItem bbiDebugLogs;
         private DevExpress.XtraBars.BarButtonItem bbiAppRole;
+        private DevExpress.XtraBars.BarButtonItem bbiSearchItem;
         private DevExpress.Utils.ImageCollection ribbonImageCollectionLarge;
         private DevExpress.XtraBars.Ribbon.RibbonPage homeRibbonPage;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup fileRibbonPageGroup;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup searchRibbonPageGroup;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup PrivRibbonPageGroup;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup skinsRibbonPageGroup;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup exitRibbonPageGroup;

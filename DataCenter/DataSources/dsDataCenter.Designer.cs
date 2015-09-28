@@ -20286,7 +20286,7 @@ SELECT TypeId, TypeName, TypeIconData, Info, active, AssociationId FROM Types WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DataCenter.Properties.Settings.Default.DataCenterConnectionString1;
+            this._connection.ConnectionString = global::DataCenter.Properties.Settings.Default.DataCenterConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20742,7 +20742,7 @@ SELECT AuthenticationId, AuthenticationRequestMessage, AuthenticationApproveMess
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DataCenter.Properties.Settings.Default.DataCenterConnectionString1;
+            this._connection.ConnectionString = global::DataCenter.Properties.Settings.Default.DataCenterConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

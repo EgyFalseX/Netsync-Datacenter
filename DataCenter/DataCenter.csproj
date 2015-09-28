@@ -68,6 +68,7 @@
     <Reference Include="DevExpress.DataAccess.v15.1.UI, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>True</Private>
     </Reference>
+    <Reference Include="DevExpress.Images.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>True</Private>
     </Reference>
@@ -180,6 +181,12 @@
     </Compile>
     <Compile Include="Forms\Data\DeletedItemFrm.Designer.cs">
       <DependentUpon>DeletedItemFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Data\SearchItemFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Data\SearchItemFrm.Designer.cs">
+      <DependentUpon>SearchItemFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ProgressFrm.cs">
       <SubType>Form</SubType>
@@ -353,6 +360,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Data\DeletedItemFrm.resx">
       <DependentUpon>DeletedItemFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Data\SearchItemFrm.resx">
+      <DependentUpon>SearchItemFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main\DebugLogsFrm.resx">
       <DependentUpon>DebugLogsFrm.cs</DependentUpon>

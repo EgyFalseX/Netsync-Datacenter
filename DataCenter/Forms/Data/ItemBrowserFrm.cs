@@ -361,6 +361,10 @@ namespace DataCenter.Forms
             else
                 DataCenterX.LogMessage("لم يتم نقل الملف", typeof(ItemBrowserFrm), nsLib.Utilities.Types.MessageType.Error, null, true);
         }
+        public void SetCatFocused(int CatId)
+        {
+            MessageBox.Show("Test");
+        }
         #endregion
         #region - Event Handlers -
        

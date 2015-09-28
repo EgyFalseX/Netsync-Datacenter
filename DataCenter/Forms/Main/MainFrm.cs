@@ -14,8 +14,8 @@ using DevExpress.UserSkins;
 using System.Data.SqlClient;
 using DevExpress.XtraSplashScreen;
 using System.Linq;
-using  DataCenter.Managers;
-
+using DataCenter.Managers;
+using DataCenter.Forms.Data;
 
 namespace DataCenter.Forms
 {
@@ -24,6 +24,7 @@ namespace DataCenter.Forms
         
         #region -   Variables   -
         private DataCenter.DataSources.dsDataCenterTableAdapters.CategoryTableAdapter adpCat = new DataSources.dsDataCenterTableAdapters.CategoryTableAdapter();
+        public ItemBrowserFrm FrmItem = new ItemBrowserFrm();
         #endregion
         #region -   Functions   -
         public MainFrm()
@@ -41,14 +42,14 @@ namespace DataCenter.Forms
         }
         void OpenFileBrowserTab()
         {
-            ItemBrowserFrm frm = new ItemBrowserFrm();
-            frm.FormClosing += new FormClosingEventHandler((o, e) => 
+            
+            FrmItem.FormClosing += new FormClosingEventHandler((o, e) => 
             {
                 if (e.CloseReason == CloseReason.UserClosing)
                     e.Cancel = true;
             });
-            frm.MdiParent = this;
-            frm.Show();
+            FrmItem.MdiParent = this;
+            FrmItem.Show();
         }
         private void LoadUserPriv()
         {
@@ -156,7 +157,13 @@ namespace DataCenter.Forms
             DeletedCategoryFrm frm = new DeletedCategoryFrm() { MdiParent = this };
             frm.Show();
         }
-        
+        private void bbiSearchItem_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            SearchItemFrm frm = new SearchItemFrm() { MdiParent = this };
+            frm.Show();
+        }
+
+
         #endregion
 
 

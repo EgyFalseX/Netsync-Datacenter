@@ -28,22 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrm));
-            this.qryCategoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qryCategoryBindingSource = new System.Windows.Forms.BindingSource();
             this.dsQueries = new DataCenter.DataSources.dsQueries();
-            this.qryItemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qryItemsBindingSource = new System.Windows.Forms.BindingSource();
             this.dsDataCenter = new DataCenter.DataSources.dsDataCenter();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
-            this.popupControlContainer2 = new DevExpress.XtraBars.PopupControlContainer(this.components);
+            this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu();
+            this.popupControlContainer2 = new DevExpress.XtraBars.PopupControlContainer();
             this.buttonEdit = new DevExpress.XtraEditors.ButtonEdit();
             this.iExit = new DevExpress.XtraBars.BarButtonItem();
-            this.popupControlContainer1 = new DevExpress.XtraBars.PopupControlContainer(this.components);
+            this.popupControlContainer1 = new DevExpress.XtraBars.PopupControlContainer();
             this.someLabelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.someLabelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.DockingMain = new DevExpress.XtraBars.BarAndDockingController(this.components);
-            this.ribbonImageCollection = new DevExpress.Utils.ImageCollection(this.components);
+            this.DockingMain = new DevExpress.XtraBars.BarAndDockingController();
+            this.ribbonImageCollection = new DevExpress.Utils.ImageCollection();
             this.iHelp = new DevExpress.XtraBars.BarButtonItem();
             this.iAbout = new DevExpress.XtraBars.BarButtonItem();
             this.siStatus = new DevExpress.XtraBars.BarStaticItem();
@@ -59,9 +58,11 @@
             this.bbiDeletedCategory = new DevExpress.XtraBars.BarButtonItem();
             this.bbiDebugLogs = new DevExpress.XtraBars.BarButtonItem();
             this.bbiAppRole = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
+            this.bbiSearchItem = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection();
             this.homeRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.fileRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.searchRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.PrivRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.skinsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.exitRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -73,7 +74,7 @@
             this.qryItemsTableAdapter = new DataCenter.DataSources.dsQueriesTableAdapters.QryItemsTableAdapter();
             this.itemTableAdapter = new DataCenter.DataSources.dsDataCenterTableAdapters.ItemTableAdapter();
             this.qryCategoryTableAdapter = new DataCenter.DataSources.dsQueriesTableAdapters.QryCategoryTableAdapter();
-            this.TabManagerMain = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.TabManagerMain = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
             ((System.ComponentModel.ISupportInitialize)(this.qryCategoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsQueries)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qryItemsBindingSource)).BeginInit();
@@ -135,10 +136,11 @@
             this.bbiDeletedItem,
             this.bbiDeletedCategory,
             this.bbiDebugLogs,
-            this.bbiAppRole});
+            this.bbiAppRole,
+            this.bbiSearchItem});
             this.ribbonControl.LargeImages = this.ribbonImageCollectionLarge;
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 72;
+            this.ribbonControl.MaxItemId = 73;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.PageHeaderItemLinks.Add(this.iAbout);
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -146,7 +148,7 @@
             this.helpRibbonPage,
             this.ribbonPageDebug});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl.Size = new System.Drawing.Size(1100, 144);
+            this.ribbonControl.Size = new System.Drawing.Size(1100, 143);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             this.ribbonControl.Toolbar.ItemLinks.Add(this.iHelp);
             // 
@@ -224,6 +226,11 @@
             this.someLabelControl1.TabIndex = 0;
             this.someLabelControl1.Text = "Some Info";
             // 
+            // DockingMain
+            // 
+            this.DockingMain.PropertiesBar.DefaultGlyphSize = new System.Drawing.Size(16, 16);
+            this.DockingMain.PropertiesBar.DefaultLargeGlyphSize = new System.Drawing.Size(32, 32);
+            // 
             // ribbonImageCollection
             // 
             this.ribbonImageCollection.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("ribbonImageCollection.ImageStream")));
@@ -240,6 +247,8 @@
             this.ribbonImageCollection.Images.SetKeyName(10, "DeletedCategories.png");
             this.ribbonImageCollection.Images.SetKeyName(11, "Debuglog.png");
             this.ribbonImageCollection.Images.SetKeyName(12, "AppRole.png");
+            this.ribbonImageCollection.InsertGalleryImage("find_16x16.png", "images/find/find_16x16.png", DevExpress.Images.ImageResourceCache.Default.GetImage("images/find/find_16x16.png"), 13);
+            this.ribbonImageCollection.Images.SetKeyName(13, "find_16x16.png");
             // 
             // iHelp
             // 
@@ -394,6 +403,16 @@
             this.bbiAppRole.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.bbiAppRole.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiAppRole_ItemClick);
             // 
+            // bbiSearchItem
+            // 
+            this.bbiSearchItem.Caption = "بحث";
+            this.bbiSearchItem.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
+            this.bbiSearchItem.Id = 72;
+            this.bbiSearchItem.ImageIndex = 13;
+            this.bbiSearchItem.LargeImageIndex = 13;
+            this.bbiSearchItem.Name = "bbiSearchItem";
+            this.bbiSearchItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiSearchItem_ItemClick);
+            // 
             // ribbonImageCollectionLarge
             // 
             this.ribbonImageCollectionLarge.ImageSize = new System.Drawing.Size(32, 32);
@@ -411,11 +430,14 @@
             this.ribbonImageCollectionLarge.Images.SetKeyName(10, "DeletedCategories.png");
             this.ribbonImageCollectionLarge.Images.SetKeyName(11, "Debuglog.png");
             this.ribbonImageCollectionLarge.Images.SetKeyName(12, "AppRole.png");
+            this.ribbonImageCollectionLarge.InsertGalleryImage("find_32x32.png", "images/find/find_32x32.png", DevExpress.Images.ImageResourceCache.Default.GetImage("images/find/find_32x32.png"), 13);
+            this.ribbonImageCollectionLarge.Images.SetKeyName(13, "find_32x32.png");
             // 
             // homeRibbonPage
             // 
             this.homeRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.fileRibbonPageGroup,
+            this.searchRibbonPageGroup,
             this.PrivRibbonPageGroup,
             this.skinsRibbonPageGroup,
             this.exitRibbonPageGroup});
@@ -431,6 +453,12 @@
             this.fileRibbonPageGroup.ItemLinks.Add(this.bbiDeletedCategory);
             this.fileRibbonPageGroup.Name = "fileRibbonPageGroup";
             this.fileRibbonPageGroup.Text = "بيانات اساسية";
+            // 
+            // searchRibbonPageGroup
+            // 
+            this.searchRibbonPageGroup.ItemLinks.Add(this.bbiSearchItem);
+            this.searchRibbonPageGroup.Name = "searchRibbonPageGroup";
+            this.searchRibbonPageGroup.Text = "بحث";
             // 
             // PrivRibbonPageGroup
             // 
@@ -515,10 +543,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 700);
-            this.Controls.Add(this.ribbonControl);
             this.Controls.Add(this.popupControlContainer1);
             this.Controls.Add(this.popupControlContainer2);
             this.Controls.Add(this.ribbonStatusBar);
+            this.Controls.Add(this.ribbonControl);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "MainFrm";
@@ -544,6 +572,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollectionLarge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabManagerMain)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -593,6 +622,7 @@
         private DevExpress.XtraBars.BarButtonItem bbiAppRole;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup PrivRibbonPageGroup;
         public DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
-
+        private DevExpress.XtraBars.BarButtonItem bbiSearchItem;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup searchRibbonPageGroup;
     }
 }
