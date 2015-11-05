@@ -80,7 +80,7 @@ namespace Netsync
             });
         }
 
-        void notifySendFiles_OnItemChanged(int index, object value)
+        void notifySendFiles_OnItemChanged(object sender, int index, object value)
         {
             this.Invoke(new MethodInvoker(() => 
             {
@@ -144,7 +144,7 @@ namespace Netsync
             MessageBox.Show("file recive complated ..");
         }
 
-        void notifySReciveFiles_OnItemChanged(int index, object value)
+        void notifySReciveFiles_OnItemChanged(object sender, int index, object value)
         {
             this.Invoke(new MethodInvoker(() =>
             {

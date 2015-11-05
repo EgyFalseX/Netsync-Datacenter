@@ -123,7 +123,7 @@ namespace DataCenter.Forms
             notify.OnItemChanged += notifyDownload_OnItemChanged;
             DataCenterX.NSManager.C_ReciveFile(sfd.FileName, AppManager.defaultInstance.GetServerOption(nsLib.Utilities.Types.ServerOptions.FilesPath) + _row.PhysicalName, ref notify);
         }
-        void notifyDownload_OnItemChanged(int index, object value)
+        void notifyDownload_OnItemChanged(object sender, int index, object value)
         {
             switch (index)
             {
@@ -203,7 +203,7 @@ namespace DataCenter.Forms
                 DataCenterX.NSManager.C_SendFile(ofd.FileName, AppManager.defaultInstance.GetServerOption(nsLib.Utilities.Types.ServerOptions.FilesPath) + _row.PhysicalName, ref notify);
             }
         }
-        void notifyUpload_OnItemChanged(int index, object value)
+        void notifyUpload_OnItemChanged(object sender, int index, object value)
         {
             switch (index)
             {

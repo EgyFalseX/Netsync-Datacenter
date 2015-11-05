@@ -26,7 +26,7 @@ namespace DataCenter.Forms
             _cancelInx = cancelInx;
             _notify.OnItemChanged += _notify_OnItemChanged;
         }
-        void _notify_OnItemChanged(int index, object value)
+        void _notify_OnItemChanged(object sender, int index, object value)
         {
             switch (index)
             {

@@ -35,7 +35,7 @@ namespace DataCenter.Forms
         {
             LSMSData.QueryableSource = ds.vDeletedItems;
         }
-        void info_OnItemChanged(int index, object value)
+        void info_OnItemChanged(object sender, int index, object value)
         {
             switch (index)
             {

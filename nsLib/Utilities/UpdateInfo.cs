@@ -9,7 +9,7 @@ namespace nsLib.Utilities
     {
         List<object> _items;
         public event EventHandlerOnItemChanged OnItemChanged;
-        public delegate void EventHandlerOnItemChanged(int index, object value);
+        public delegate void EventHandlerOnItemChanged(object sender, int index, object value);
 
         public UpdateInfo()
         {
@@ -39,7 +39,7 @@ namespace nsLib.Utilities
             _items[index] = obj;
             if (OnItemChanged != null)
             {
-                OnItemChanged(index, obj);
+                OnItemChanged(this, index, obj);
             }
         }
 

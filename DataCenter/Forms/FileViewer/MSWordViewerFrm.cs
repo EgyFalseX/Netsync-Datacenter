@@ -38,7 +38,7 @@ namespace DataCenter.Forms
             notify.OnItemChanged += notifyDownload_OnItemChanged;
             DataCenterX.NSManager.C_ReciveFile(ms, AppManager.defaultInstance.GetServerOption(nsLib.Utilities.Types.ServerOptions.FilesPath) + _row.PhysicalName, ref notify);
         }
-        void notifyDownload_OnItemChanged(int index, object value)
+        void notifyDownload_OnItemChanged(object sender, int index, object value)
         {
             switch (index)
             {
